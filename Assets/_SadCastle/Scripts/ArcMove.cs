@@ -4,11 +4,23 @@ using UnityEngine;
 
 public class ArcMove : Entity
 {
+    SpriteRenderer sprite;
     // Start is called before the first frame update
     protected override void Start()
     {
+        sprite = GetComponentInChildren<SpriteRenderer>();
+
         start = transform.position;
         mid = Vector3.Lerp(target.position, transform.position, 0.5f) + Vector3.up * 3;
+
+        if (transform.position.x < target.position.x)
+        {
+            sprite.flipY = true;
+        }
+        else
+        {
+            sprite.flipY = false;
+        }
     }
 
     // Update is called once per frame
