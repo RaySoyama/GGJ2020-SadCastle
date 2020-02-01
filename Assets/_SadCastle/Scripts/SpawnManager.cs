@@ -4,7 +4,21 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public enum _Entity { Kid, Volleyball };
+    public enum _Entity 
+    {   
+        Kid, 
+        Beachball,
+        NoLitter,
+        Beer,
+        Coconut,
+        Lightning,
+        Volleyball,
+        Weed,
+        Umbrella,
+        Wave,
+        Tide,
+        Metor
+    };
 
     [System.Serializable]
     public class SpawnType
