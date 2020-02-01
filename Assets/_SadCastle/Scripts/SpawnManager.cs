@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public enum Entity { Kid, Volleyball };
+    public enum _Entity { Kid, Volleyball };
+
     [System.Serializable]
     public class SpawnType
     {
-        public Entity name;
+        public _Entity name;
         public GameObject entityPrefab;
         public Transform[] spawnPositions;
     }
