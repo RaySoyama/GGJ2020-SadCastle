@@ -25,7 +25,7 @@ public class WorldMachine : MonoBehaviour
 
     void Start()
     {
-        spawnManager = SpawnManager.SuperSpawnManager;
+        spawnManager = SpawnManager.instance;
     
         
     }
