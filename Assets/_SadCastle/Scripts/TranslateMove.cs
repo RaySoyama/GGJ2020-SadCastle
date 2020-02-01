@@ -7,7 +7,7 @@ public class TranslateMove : Entity
     // Start is called before the first frame update
     protected override void Start()
     {
-
+        base.Start();
     }
 
     // Update is called once per frame
@@ -18,9 +18,10 @@ public class TranslateMove : Entity
 
     public override void Move()
     {
-        if (move)
+        if (elapsed < duration)
         {
-            transform.position = Vector3.Lerp(start, target.position, Time.deltaTime);
+            elapsed += Time.deltaTime;
+            transform.position = Vector3.Lerp(start, target.position, (elapsed / duration) >= 1 ? 1 : elapsed / duration);
         }
     }
 }

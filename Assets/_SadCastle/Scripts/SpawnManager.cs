@@ -44,7 +44,8 @@ public class SpawnManager : MonoBehaviour
         int randPos = Random.Range(0, spawnTypes[randInd].spawnPositions.Length);
         spawnTimer = 0;
 
-        global::Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos]).GetComponent<global::Entity>();
+        Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos].position, 
+            spawnTypes[randInd].spawnPositions[randPos].rotation).GetComponent<Entity>();
         currentEntity.target = targets[Random.Range(0, targets.Length)];
     }
 
@@ -54,7 +55,8 @@ public class SpawnManager : MonoBehaviour
         int randPos = Random.Range(0, spawnTypes[randInd].spawnPositions.Length);
         spawnTimer = 0;
 
-        global::Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos]).GetComponent<global::Entity>();
+        Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos].position,
+            spawnTypes[randInd].spawnPositions[randPos].rotation).GetComponent<Entity>();
         currentEntity.target = targets[Random.Range(0, targets.Length)];
     }
 }
