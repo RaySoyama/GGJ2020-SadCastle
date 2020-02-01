@@ -7,6 +7,7 @@ public class Entity : MonoBehaviour
     public Transform target;
     public bool move;
     public float elapsed, duration;
+    public float destroyTime;
 
     protected Vector3 start, mid;
 
@@ -34,7 +35,7 @@ public class Entity : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, target.position) <= 0.1f)
         {
-            Destroy(gameObject, 2f);
+            Destroy(gameObject, destroyTime);
         }
     }
 }
