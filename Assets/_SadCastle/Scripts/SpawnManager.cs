@@ -17,7 +17,7 @@ public class SpawnManager : MonoBehaviour
         Umbrella,
         Wave,
         Tide,
-        Metor
+        Meteor
     };
 
     [System.Serializable]
@@ -37,22 +37,19 @@ public class SpawnManager : MonoBehaviour
     public float spawnTimer;
     public float cooldownDuration;
 
-    public static SpawnManager SuperSpawnManager;
-
+    public static SpawnManager instance;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (SuperSpawnManager == null)
+        if (instance == null)
         {
-            SuperSpawnManager = this;
+            instance = this;
         }
-        else 
+        else
         {
-            Debug.LogError("REE more than one singleton");
-            return;
+            Debug.LogError("There is more than one instance of SpawnManager!");
         }
-
     }
 
     // Update is called once per frame

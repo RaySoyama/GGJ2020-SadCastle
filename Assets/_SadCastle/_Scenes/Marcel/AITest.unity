@@ -689,5 +689,16 @@ PrefabInstance:
       propertyPath: targets.Array.data[0]
       value: 
       objectReference: {fileID: 327141791}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[1].entityPrefab
+      value: 
+      objectReference: {fileID: 5746678492221084828, guid: 999c19e8c5a93b14999a047a8229be8d,
+        type: 3}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: autoSpawn
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af55676cb208404dbabfee7db54c18c, type: 3}

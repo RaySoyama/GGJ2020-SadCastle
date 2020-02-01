@@ -22,10 +22,19 @@ public class Entity : MonoBehaviour
         {
             Move();
         }
+        SelfTerminate();
     }
 
     public virtual void Move()
     {
 
+    }
+
+    public virtual void SelfTerminate()
+    {
+        if (Vector3.Distance(transform.position, target.position) <= 0.1f)
+        {
+            Destroy(gameObject, 2f);
+        }
     }
 }
