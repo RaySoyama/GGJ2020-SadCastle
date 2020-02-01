@@ -17,7 +17,8 @@ public class SpawnManager : MonoBehaviour
         Umbrella,
         Wave,
         Tide,
-        Meteor
+        Meteor,
+        Shark
     };
 
     [System.Serializable]
