@@ -31,12 +31,27 @@ public class SpawnManager : MonoBehaviour
         spawnTimer += Time.deltaTime;
         if (spawnTimer > cooldownDuration)
         {
-            int randInd = Random.Range(0, spawnTypes.Length);
-            int randPos = Random.Range(0, spawnTypes[randInd].spawnPositions.Length);
-            spawnTimer = 0;
-
-            Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos]).GetComponent<Entity>();
-            currentEntity.target = targets[Random.Range(0, targets.Length)];
+            SpawnEntity();
         }
+    }
+
+    public void SpawnEntity()
+    {
+        int randInd = Random.Range(0, spawnTypes.Length);
+        int randPos = Random.Range(0, spawnTypes[randInd].spawnPositions.Length);
+        spawnTimer = 0;
+
+        Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos]).GetComponent<Entity>();
+        currentEntity.target = targets[Random.Range(0, targets.Length)];
+    }
+
+    public void SpawnEntity(SpawnType entity)
+    {
+        int randInd = Random.Range(0, spawnTypes.Length);
+        int randPos = Random.Range(0, spawnTypes[randInd].spawnPositions.Length);
+        spawnTimer = 0;
+
+        Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos]).GetComponent<Entity>();
+        currentEntity.target = targets[Random.Range(0, targets.Length)];
     }
 }
