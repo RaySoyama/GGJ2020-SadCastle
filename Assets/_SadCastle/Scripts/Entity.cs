@@ -4,24 +4,20 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
-    public Vector3 target;
+    public Transform target;
     public bool move;
+    public float elapsed, duration;
 
-    Vector3 start, mid;
+    protected Vector3 start, mid;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
-        start = transform.position;
-        mid = transform.forward;
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void Move()
     {
-        if (move)
-        {
-            Bezier.QuadraticBezier(start, mid, target, Time.deltaTime);
-        }
+
     }
 }
