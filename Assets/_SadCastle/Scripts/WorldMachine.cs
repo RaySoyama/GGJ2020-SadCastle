@@ -25,7 +25,9 @@ public class WorldMachine : MonoBehaviour
 
     void Start()
     {
-        spawnManager = GameObject.FindGameObjectWithTag("SpawnManager").GetComponent<SpawnManager>();
+        spawnManager = SpawnManager.SuperSpawnManager;
+    
+        
     }
 
     void Update()
@@ -34,8 +36,7 @@ public class WorldMachine : MonoBehaviour
 
         if (SpawnTimeline.Count != 0 && time >= SpawnTimeline[0].InGameTime)
         {
-            spawnManager.SpawnEntity(); // there is an overload with a SpawnManager._Entity parameter
-            Debug.Log("Spawned Object");
+            spawnManager.SpawnEntity(SpawnTimeline[0].entityName); // there is an overload with a SpawnManager._Entity parameter
             SpawnTimeline.RemoveAt(0);
         }
     }

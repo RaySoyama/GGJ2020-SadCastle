@@ -37,9 +37,21 @@ public class SpawnManager : MonoBehaviour
     public float spawnTimer;
     public float cooldownDuration;
 
+    public static SpawnManager SuperSpawnManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        if (SuperSpawnManager == null)
+        {
+            SuperSpawnManager = this;
+        }
+        else 
+        {
+            Debug.LogError("REE more than one singleton");
+            return;
+        }
 
     }
 
