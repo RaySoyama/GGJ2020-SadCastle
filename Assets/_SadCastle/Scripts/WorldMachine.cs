@@ -8,8 +8,10 @@ public class WorldMachine : MonoBehaviour
     struct SpawnTimerObject
     {
         public float InGameTime;
-        //enum      
+        public SpawnManager._Entity entityName;
     }
+
+    SpawnManager spawnManager;
 
     [SerializeField]
     private List<SpawnTimerObject> SpawnTimeline = new List<SpawnTimerObject>();
@@ -23,8 +25,7 @@ public class WorldMachine : MonoBehaviour
 
     void Start()
     {
-   
-
+        spawnManager = GameObject.FindGameObjectWithTag("SpawnManager").GetComponent<SpawnManager>();
     }
 
     void Update()
@@ -33,11 +34,9 @@ public class WorldMachine : MonoBehaviour
 
         if (SpawnTimeline.Count != 0 && time >= SpawnTimeline[0].InGameTime)
         {
-            //Call Marcel script
+            spawnManager.SpawnEntity(); // there is an overload with a SpawnManager._Entity parameter
             Debug.Log("Spawned Object");
             SpawnTimeline.RemoveAt(0);
         }
-
-
     }
 }
