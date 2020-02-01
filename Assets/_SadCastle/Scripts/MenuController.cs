@@ -17,7 +17,9 @@ public class MenuController : MonoBehaviour
         public RectTransform elementRect;
         public Vector2 startPosition;
         public Vector2 stopPosition;
-        public float duration;
+        public float showDurationMs;
+        public float hideDurationMs;
+
     }
     public ElementStartStop[] elements;
 
@@ -36,7 +38,7 @@ public class MenuController : MonoBehaviour
 
         foreach (var elem in elements)
         {
-            elem.elementRect.DOAnchorPos(elem.stopPosition, elem.duration, false);
+            elem.elementRect.DOAnchorPos(elem.stopPosition, elem.showDurationMs / 1000.0f, false);
         }
     }
 
@@ -47,7 +49,7 @@ public class MenuController : MonoBehaviour
 
         foreach (var elem in elements)
         {
-            elem.elementRect.DOAnchorPos(elem.startPosition, elem.duration, false).SetEase(Ease.InBounce);
+            elem.elementRect.DOAnchorPos(elem.startPosition, elem.hideDurationMs / 1000.0f, false).SetEase(Ease.InBack);
         }
     }
 }
