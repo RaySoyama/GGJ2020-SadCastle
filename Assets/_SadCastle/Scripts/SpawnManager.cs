@@ -23,10 +23,19 @@ public class SpawnManager : MonoBehaviour
     public float spawnTimer;
     public float cooldownDuration;
 
+    public static SpawnManager instance;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.LogError("There is more than one instance of SpawnManager!");
+        }
     }
 
     // Update is called once per frame
