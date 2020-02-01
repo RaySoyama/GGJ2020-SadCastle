@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    public enum Entity { Kid, Volleyball };
     [System.Serializable]
     public class SpawnType
     {
+        public Entity name;
         public GameObject entityPrefab;
         public Transform[] spawnPositions;
     }
@@ -41,7 +43,7 @@ public class SpawnManager : MonoBehaviour
         int randPos = Random.Range(0, spawnTypes[randInd].spawnPositions.Length);
         spawnTimer = 0;
 
-        Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos]).GetComponent<Entity>();
+        global::Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos]).GetComponent<global::Entity>();
         currentEntity.target = targets[Random.Range(0, targets.Length)];
     }
 
@@ -51,7 +53,7 @@ public class SpawnManager : MonoBehaviour
         int randPos = Random.Range(0, spawnTypes[randInd].spawnPositions.Length);
         spawnTimer = 0;
 
-        Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos]).GetComponent<Entity>();
+        global::Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos]).GetComponent<global::Entity>();
         currentEntity.target = targets[Random.Range(0, targets.Length)];
     }
 }
