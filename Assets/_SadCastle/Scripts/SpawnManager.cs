@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public enum Entity { Kid, Volleyball };
+    public enum _Entity { Kid, Volleyball };
+
     [System.Serializable]
     public class SpawnType
     {
-        public Entity name;
+        public _Entity name;
         public GameObject entityPrefab;
         public Transform[] spawnPositions;
     }
@@ -18,6 +19,7 @@ public class SpawnManager : MonoBehaviour
 
     public Transform[] targets;
     [Header("Spawn Cooldown")]
+    public bool autoSpawn;
     public float spawnTimer;
     public float cooldownDuration;
 
@@ -30,10 +32,13 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spawnTimer += Time.deltaTime;
-        if (spawnTimer > cooldownDuration)
+        if (autoSpawn && spawnTimer > cooldownDuration)
         {
             SpawnEntity();
+        }
+        else if (spawnTimer < cooldownDuration)
+        {
+            spawnTimer += Time.deltaTime;
         }
     }
 
@@ -43,17 +48,30 @@ public class SpawnManager : MonoBehaviour
         int randPos = Random.Range(0, spawnTypes[randInd].spawnPositions.Length);
         spawnTimer = 0;
 
-        global::Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos]).GetComponent<global::Entity>();
+        Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos].position, 
+            spawnTypes[randInd].spawnPositions[randPos].rotation).GetComponent<Entity>();
         currentEntity.target = targets[Random.Range(0, targets.Length)];
     }
 
-    public void SpawnEntity(SpawnType entity)
+    public void SpawnEntity(_Entity entity)
     {
-        int randInd = Random.Range(0, spawnTypes.Length);
-        int randPos = Random.Range(0, spawnTypes[randInd].spawnPositions.Length);
-        spawnTimer = 0;
+        SpawnType currentSpawnType = GetEntity(entity);
+        int randPos = Random.Range(0, currentSpawnType.spawnPositions.Length);
 
-        global::Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos]).GetComponent<global::Entity>();
+        Entity currentEntity = Instantiate(currentSpawnType.entityPrefab, currentSpawnType.spawnPositions[randPos].position,
+            currentSpawnType.spawnPositions[randPos].rotation).GetComponent<Entity>();
         currentEntity.target = targets[Random.Range(0, targets.Length)];
+    }
+
+    public SpawnType GetEntity(_Entity name)
+    {
+        for (int i = 0; i < spawnTypes.Length; i++)
+        {
+            if (spawnTypes[i].name == name)
+            {
+                return spawnTypes[i];
+            }
+        }
+        return null;
     }
 }
