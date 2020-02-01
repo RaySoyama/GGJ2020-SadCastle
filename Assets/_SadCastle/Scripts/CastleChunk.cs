@@ -5,6 +5,7 @@ using UnityEngine;
 public class CastleChunk : MonoBehaviour
 {
     [SerializeField] bool isDestroyed = false;
+    [SerializeField] Player player;
 
     bool wasDestroyed = false;
 
@@ -20,16 +21,16 @@ public class CastleChunk : MonoBehaviour
         
     }
 
- 
     void OnMouseOver()
     {
-        if (isDestroyed && Input.GetMouseButton(0)) 
+        if (isDestroyed && Input.GetMouseButtonDown(0)) 
         {
-            Repair();
+            player.MoveTowardsChunk(this);
+            // Repair();
         }
 
         // For testing
-        else if (!isDestroyed && Input.GetMouseButton(1)) 
+        else if (!isDestroyed && Input.GetMouseButtonDown(1)) 
         {
             Destroy();
         }
@@ -41,7 +42,7 @@ public class CastleChunk : MonoBehaviour
         mesh.enabled = false;
     }
 
-    void Repair()
+    public void Repair()
     {
         isDestroyed = false;
         mesh.enabled = true;
