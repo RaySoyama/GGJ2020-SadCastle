@@ -13,7 +13,15 @@ public class Entity : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
+        start = transform.position;
+    }
 
+    protected virtual void Update()
+    {
+        if (move)
+        {
+            Move();
+        }
     }
 
     public virtual void Move()

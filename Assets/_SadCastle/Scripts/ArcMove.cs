@@ -2,22 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shark : Entity
+public class ArcMove : Entity
 {
     // Start is called before the first frame update
     protected override void Start()
     {
         start = transform.position;
-        mid = transform.forward * 5;
+        mid = (target.position - transform.position).normalized + Vector3.up * 3;
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        if (move)
-        {
-            Move();
-        }
+        base.Update();
     }
 
     public override void Move()
