@@ -1,18 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class Player : MonoBehaviour
 {
+    NavMeshAgent agent;
+    CastleChunk currentChunk;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            Debug.Log("movement complete");
+            if (currentChunk)
+            {
+                currentChunk.Repair();
+            }
+        }
     }
+
+    public void MoveTowardsChunk(CastleChunk chunk)
+    {
+        currentChunk = chunk;
+
+        Vector3 chunkPosition = chunk.transform.position;
+        // transform.position = chunkPosition;
+        agent.SetDestination(chunkPosition);
+    }
+
+    
 }
