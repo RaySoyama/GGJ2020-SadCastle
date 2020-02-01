@@ -8,7 +8,7 @@ public class ArcMove : Entity
     protected override void Start()
     {
         start = transform.position;
-        mid = (target.position - transform.position).normalized + Vector3.up * 3;
+        mid = (target.position - transform.position).normalized / 2 + Vector3.up * 3;
     }
 
     // Update is called once per frame
