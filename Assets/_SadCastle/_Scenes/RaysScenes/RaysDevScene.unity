@@ -378,13 +378,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153383396}
-  m_LocalRotation: {x: 0.022123974, y: -0.9609642, z: 0.26374307, w: 0.08061009}
-  m_LocalPosition: {x: 1.62, y: 4.08, z: 5.38}
+  m_LocalRotation: {x: 0.018242905, y: -0.9472489, z: 0.30940622, w: 0.08157607}
+  m_LocalPosition: {x: 1.62, y: 4.63, z: 4.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 30.695002, y: -170.41, z: 0}
+  m_LocalEulerAnglesHint: {x: 36.096, y: -169.78801, z: 1.1290001}
 --- !u!1 &744807866
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 744807868}
   - component: {fileID: 744807867}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 827845821}
   - component: {fileID: 827845820}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Sand Beach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
