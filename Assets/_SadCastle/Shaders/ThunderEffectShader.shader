@@ -16,6 +16,7 @@
 		Tags { "Queue" = "Transparent" "RenderType" = "Transparent" }
 		LOD 100
 		ZWrite On
+		//ZTest Off
 		Blend SrcAlpha OneMinusSrcAlpha
 
         Pass
@@ -61,7 +62,6 @@
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 
-
 				UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
             }
@@ -69,17 +69,42 @@
             fixed4 frag (v2f i) : SV_Target
 			{
 				// sample the texture
-				fixed4 col = tex2D(_MainTex, i.uv);
+				fixed4 col = (1,1,1,1);
+
+
 				// apply fog
 				UNITY_APPLY_FOG(i.fogCoord, col);
 				
 				//determine noise
 				fixed4 noise = tex2D(_NoiseTex, float2(i.uv.x * _NoiseTex_ST.x - _Time.y * _Speed, i.uv.y * _NoiseTex_ST.y + _Time.y * _Speed ));
 
+				fixed4 grad = tex2D(_MainTex, float2(i.uv.x, i.uv.y));
+				
 				//Make Line
+				col.a = step((0.5f - _LineSize / 2) + (noise.r - 0.5f) * _Noise, i.uv.x) * (1 - step((0.5f + _LineSize / 2) + (noise.r - 0.5f) * _Noise, i.uv.x)) * step(1.0f - _VerticalCut, i.uv.y);
+				
+				float left = (0.5f - _LineSize / 2) + (noise.r - 0.5f) * _Noise;
+				float right = (0.5f + _LineSize / 2) + (noise.r - 0.5f) * _Noise;
 
-				col.a = step((0.5f - _LineSize / 2) + (noise.r - 0.5f) * _Noise, i.uv.x) * (1 - step((0.5f + _LineSize / 2) + (noise.r - 0.5f) * _Noise, i.uv.x)) * step(1.0f - _VerticalCut, 1.0f - i.uv.y);
-					
+				//if (i.uv.x < left)
+				//{
+				//	col.a = 0;
+				//}
+				//
+				//if (i.uv.x > right)
+				//{
+				//	col.a = 0;
+				//}
+
+
+				////a += 1.0 / ((b-a) * amount );
+				
+				float yeet = (right - i.uv.x) / (right - left);
+
+
+				col *= tex2D(_MainTex, yeet);
+				//col.rgb = yeet;
+
 				return col * _Color;
             }
             ENDCG
