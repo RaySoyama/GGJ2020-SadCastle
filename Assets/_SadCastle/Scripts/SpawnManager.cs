@@ -101,6 +101,13 @@ public class SpawnManager : MonoBehaviour
     public void SpawnEntity(_Entity entity)
     {
         SpawnType currentSpawnType = GetEntity(entity);
+
+        if (currentSpawnType == null)
+        {
+            Debug.LogError($"Entity {entity.ToString()} does not exsist ");
+            return;
+        }
+
         int randPos = Random.Range(0, currentSpawnType.spawnPositions.Length);
 
         Entity currentEntity = Instantiate(currentSpawnType.entityPrefab, currentSpawnType.spawnPositions[randPos].position,
