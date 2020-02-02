@@ -41,6 +41,8 @@ public class UIController : MonoBehaviour
     [ContextMenu("ShowGameOverPanel")]
     void ShowGameOverPanel()
     {
+        gameOver = true;
+
         GameOverPanel.anchoredPosition = new Vector2(0, 1080);
         GameOverPanel.DOAnchorPos(Vector2.zero, 0.5f, false).SetDelay(0.5f).SetEase(Ease.OutExpo);
 
