@@ -988,6 +988,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiController: {fileID: 1133566548}
   castle: {fileID: 1401727016}
+  OnGameOver:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  gameOverAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &259482012
 GameObject:
   m_ObjectHideFlags: 0
@@ -4170,31 +4177,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
-      propertyPath: spawnTypes.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
-      propertyPath: spawnTypes.Array.data[4].spawnPositions.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
-      propertyPath: spawnTypes.Array.data[5].spawnPositions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
-      propertyPath: spawnTypes.Array.data[6].spawnPositions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
-      propertyPath: spawnTypes.Array.data[7].spawnPositions.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
       propertyPath: castle
       value: 
       objectReference: {fileID: 1401727016}
@@ -4230,17 +4212,6 @@ PrefabInstance:
       objectReference: {fileID: 1182065255}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
-      propertyPath: lightning
-      value: 
-      objectReference: {fileID: 3462554725821657113, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
-      propertyPath: autoSpawn
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
       propertyPath: spawnTypes.Array.data[3].spawnPositions.Array.data[0]
       value: 
       objectReference: {fileID: 2011980642}
@@ -4251,26 +4222,9 @@ PrefabInstance:
       objectReference: {fileID: 1182065255}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
-      propertyPath: spawnTypes.Array.data[4].entityPrefab
-      value: 
-      objectReference: {fileID: 3462554725821657113, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
       propertyPath: spawnTypes.Array.data[4].spawnPositions.Array.data[0]
       value: 
       objectReference: {fileID: 1928960465}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
-      propertyPath: spawnTypes.Array.data[4].spawnPositions.Array.data[1]
-      value: 
-      objectReference: {fileID: 1182065255}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
-      propertyPath: spawnTypes.Array.data[5].entityPrefab
-      value: 
-      objectReference: {fileID: 3726066018062131050, guid: 5eae6c2a14b886a42905bf6d7e79c9d8,
-        type: 3}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
       propertyPath: spawnTypes.Array.data[5].spawnPositions.Array.data[0]
@@ -4283,12 +4237,6 @@ PrefabInstance:
       objectReference: {fileID: 1182065255}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
-      propertyPath: spawnTypes.Array.data[6].entityPrefab
-      value: 
-      objectReference: {fileID: 5746678492221084828, guid: 5b2e2475931b41e46adba70e5f95f949,
-        type: 3}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
       propertyPath: spawnTypes.Array.data[6].spawnPositions.Array.data[0]
       value: 
       objectReference: {fileID: 1889715615}
@@ -4297,12 +4245,6 @@ PrefabInstance:
       propertyPath: spawnTypes.Array.data[6].spawnPositions.Array.data[1]
       value: 
       objectReference: {fileID: 259482013}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
-      propertyPath: spawnTypes.Array.data[7].entityPrefab
-      value: 
-      objectReference: {fileID: 363093555575640343, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
-        type: 3}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
       propertyPath: spawnTypes.Array.data[7].spawnPositions.Array.data[0]

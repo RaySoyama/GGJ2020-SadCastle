@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -3377035702823559246}
   - component: {fileID: 4065821751594214938}
   - component: {fileID: -4340439939222348693}
+  - component: {fileID: 6866345791422463001}
   m_Layer: 0
   m_Name: Bottle
   m_TagString: Untagged
@@ -202,6 +203,45 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6866345791422463001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5746678492221084828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80521f6dbff8da4d86cd3caf1b135f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EntityType: 3
+  target: {fileID: 0}
+  maxChuncks: 1
+  move: 0
+  elapsed: 0
+  duration: 3
+  destroyTime: 0
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnMid:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onSpawnAudio: []
+  onMidAudio: []
+  onEndAudio: []
+  audioSource: {fileID: 0}
+  height: 8
 --- !u!95 &5599842451199022616
 Animator:
   serializedVersion: 3
