@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2102543584527696909}
   - component: {fileID: 1608304756}
+  - component: {fileID: 2102543584527696907}
   m_Layer: 0
   m_Name: 333Castle
   m_TagString: Untagged
@@ -80,6 +81,20 @@ MonoBehaviour:
     - {fileID: 2102543586172178496}
     - {fileID: 2102543585089027238}
     - {fileID: 2102543584817591366}
+--- !u!114 &2102543584527696907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102543584527696906}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f016008fa5a4aee47a2c6cbcf2ab93b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doDestructionTest: 0
+  destructionTestNums: {x: 0, y: 0}
 --- !u!65 &2102543586172178498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123,6 +138,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: 3313179105785353687, guid: 55fa871b5c976d64c840e6cc22186d0a,
+    type: 3}
+  destroyedMesh: {fileID: 6119803668234692923, guid: db8e5c45fca954e4f8250ce392659c7e,
+    type: 3}
 --- !u!208 &2102543586041601582
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -166,6 +185,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: 4222921778855249533, guid: b2fa760ade45b834ca86e88826d4236c,
+    type: 3}
+  destroyedMesh: {fileID: -7506299890814108258, guid: 9bd7635a42e9d2a4d81f86fc5ed7e4a4,
+    type: 3}
 --- !u!65 &2102543585388103018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -209,6 +232,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: -8610884000960378522, guid: bbb4b2bdc476a5a4c9079b93b85b8f5d,
+    type: 3}
+  destroyedMesh: {fileID: -3145842058143890899, guid: fdcbdbdda6424bc4f85ea09cc43b57fe,
+    type: 3}
 --- !u!208 &2102543585355828426
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -252,6 +279,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: -5134578482916505384, guid: 8c89b55e39d32ae43a91870a659dfc10,
+    type: 3}
+  destroyedMesh: {fileID: -6627670516356568509, guid: ac7904c0e2116e543b06ba537d9f2a31,
+    type: 3}
 --- !u!208 &2102543585476703244
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -295,6 +326,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: -562919623654252112, guid: 2b459aa815a776f4b8c4de0c197756f9,
+    type: 3}
+  destroyedMesh: {fileID: 8663745558111234799, guid: 53bb9ca06b27ab140a46c06cac9dd27b,
+    type: 3}
 --- !u!208 &2102543584890571534
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -338,6 +373,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: -1507569280960383830, guid: b960e0db96793d34fab01506b8c91ab0,
+    type: 3}
+  destroyedMesh: {fileID: 5930602951491828699, guid: add8c8738899bbd458239e2ba9e6529c,
+    type: 3}
 --- !u!65 &2102543584817895952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -381,6 +420,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: 783474001388152168, guid: 719f9889881c9a44aaf9511e7304f2f4,
+    type: 3}
+  destroyedMesh: {fileID: 6271428113557983383, guid: 7f8102c3a9f46744c9a224890aa8e791,
+    type: 3}
 --- !u!65 &2102543584817591368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -424,6 +467,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: 5842975796428607801, guid: 8ce761ae94b2aa84384aa362bbbceeac,
+    type: 3}
+  destroyedMesh: {fileID: -7151847634789604441, guid: 7222baf4b75bfd643909fbf0f0864104,
+    type: 3}
 --- !u!65 &2102543585089027240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -467,6 +514,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: -5443575043433440953, guid: 18a0d4c5da515684d8a5e7268679fe29,
+    type: 3}
+  destroyedMesh: {fileID: -4142093688324302395, guid: d5e5df49cc7566148a8cbd7874925b7e,
+    type: 3}
 --- !u!65 &2102543585078886856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -510,6 +561,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: 6144842028268355641, guid: 6450a9568197b914abbc6487670886c5,
+    type: 3}
+  destroyedMesh: {fileID: -5309719805143343798, guid: 0cbc53f3400391548bc5249ee2d1266e,
+    type: 3}
 --- !u!65 &2102543584316205354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -553,6 +608,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: -7550204999601691089, guid: 58c94975159ff53438183808f9ea3826,
+    type: 3}
+  destroyedMesh: {fileID: 4445873961563092704, guid: a2808426427ba0642a21c1593d44a413,
+    type: 3}
 --- !u!208 &2102543584273524314
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -596,6 +655,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: 1989049704526227581, guid: a2a6bbb4289d9ed49be6699d6b445a66,
+    type: 3}
+  destroyedMesh: {fileID: 6391499065119348553, guid: 7bbd5ddec2501d440a2813722136b2f1,
+    type: 3}
 --- !u!65 &2102543584575011560
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -639,6 +702,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: 7906728210633442973, guid: 48747e7afdde9ee4b8a4bf7ac2cf3953,
+    type: 3}
+  destroyedMesh: {fileID: 2521785330832014739, guid: 913a093b927fab84bb503ddfdff68667,
+    type: 3}
 --- !u!208 &2102543584539450522
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -682,6 +749,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: 2112645978712178206, guid: 90afb379dbe0d3c49b34e5f1505675f6,
+    type: 3}
+  destroyedMesh: {fileID: 2371446014406485756, guid: 0130323ffe85afa44a30ca8a2b4129f1,
+    type: 3}
 --- !u!65 &2102543584497167809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -725,6 +796,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: 4992165964883004902, guid: c69ccb754d67d6a4ba9de0e7b58f4d99,
+    type: 3}
+  destroyedMesh: {fileID: 4644586920082456424, guid: bf9dc6bc695cd5247b46812c02e202be,
+    type: 3}
 --- !u!65 &2102543584410637848
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -768,6 +843,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDestroyed: 0
   player: {fileID: 0}
+  builtMesh: {fileID: -1779572432643685669, guid: 8f1e704bba0aa9d4cae1e03c5563aa38,
+    type: 3}
+  destroyedMesh: {fileID: -542915877124205052, guid: 447ac4fddb1f7bb43aeefcaf99866f37,
+    type: 3}
 --- !u!1001 &2102543584273524310
 PrefabInstance:
   m_ObjectHideFlags: 0
