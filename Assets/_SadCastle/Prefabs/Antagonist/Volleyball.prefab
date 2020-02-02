@@ -179,14 +179,12 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   onSpawnAudio:
   - {fileID: 8300000, guid: 44b8447d36d885f4a8d4e676dc5491c8, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 23bda4de2a8f7ae4e98b3284fe2cb6a4, type: 3}
   onMidAudio:
   - {fileID: 8300000, guid: f68dec0e41cd088438f5c7044f97ea73, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
   onEndAudio:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: ca5662c9151b6ce459039fc6b18ef401, type: 3}
+  - {fileID: 8300000, guid: 7149e39879076774c8236aa76924bb42, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   audioSource: {fileID: 5488833979761178192}
