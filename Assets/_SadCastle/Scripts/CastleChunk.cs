@@ -48,4 +48,9 @@ public class CastleChunk : MonoBehaviour
         isDestroyed = false;
         mesh.enabled = true;
     }
+
+    public bool CanRepair()
+    {
+        return isDestroyed;
+    }
 }
