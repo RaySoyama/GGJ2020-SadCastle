@@ -14,6 +14,20 @@ public class MenuController : MonoBehaviour
     public float startDelaySeconds = 0.0f;
     public bool showOnStart = false;
 
+    public GameObject[] panels;
+    public GameObject defaultActivePanel;
+
+    public void SetActivePanel(GameObject newActivePanel)
+    {
+        foreach(var pan in panels)
+        {
+            pan.SetActive(false);
+        }
+        newActivePanel.SetActive(true);
+
+        OnMenuStateChanged?.Invoke(newActivePanel);
+    }
+
     [System.Serializable]
     public class ElementStartStop
     {
@@ -32,6 +46,8 @@ public class MenuController : MonoBehaviour
         {
             ShowMenu(startDelaySeconds);
         }
+
+        SetActivePanel(defaultActivePanel);
     }
 
     private void Update()
@@ -85,6 +101,11 @@ public class MenuController : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
+    }
+
+    public void OnValidate()
+    {
+
     }
 }
 
