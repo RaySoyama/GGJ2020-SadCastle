@@ -40,6 +40,12 @@ public class Kernel : MonoBehaviour
     public void EndGame()
     {
         gameOver = true;
+        if (uiController == null)
+        {
+            Debug.LogWarning("Failed to locate UI controller! Failsafe: return to 'menutest' scene...");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("menutest");
+            return;
+        }
         uiController.ShowGameOverPanel();
     }
 }
