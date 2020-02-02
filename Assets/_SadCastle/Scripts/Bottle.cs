@@ -12,6 +12,8 @@ public class Bottle : Entity
 
         start = transform.position;
         mid = Vector3.Lerp(target.position, transform.position, 0.5f) + Vector3.up * height;
+        transform.forward = (target.position - transform.position);
+        transform.forward = new Vector3(0, 0, transform.forward.z);
     }
 
     public override void Move()
