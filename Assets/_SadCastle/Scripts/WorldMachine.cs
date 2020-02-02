@@ -19,8 +19,8 @@ public class WorldMachine : MonoBehaviour
         SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Shark);
     }
 
-    //public void SpawnBeachball()
-    //{
-    //    SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Beachball);
-    //}
+    public void SpawnLightning()
+    {
+        SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Lightning);
+    }
 }
