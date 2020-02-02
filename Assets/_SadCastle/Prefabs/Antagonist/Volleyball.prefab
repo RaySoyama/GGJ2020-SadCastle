@@ -161,7 +161,7 @@ MonoBehaviour:
   move: 1
   elapsed: 0
   duration: 1
-  destroyTime: 1
+  destroyTime: 5
   OnSpawn:
     m_PersistentCalls:
       m_Calls: []
@@ -179,10 +179,10 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   onSpawnAudio: {fileID: 8300000, guid: 44b8447d36d885f4a8d4e676dc5491c8, type: 3}
   onMidAudio: {fileID: 8300000, guid: f68dec0e41cd088438f5c7044f97ea73, type: 3}
-  onEndAudio: {fileID: 0}
+  onEndAudio: {fileID: 8300000, guid: 180f0c8f8e0e5f14d8bb8f319f8a11c7, type: 3}
   audioSource: {fileID: 5488833979761178192}
-  endDistance: 7.5
-  height: 4
+  endDistance: 7
+  height: 6
 --- !u!135 &3855676651006487727
 SphereCollider:
   m_ObjectHideFlags: 0

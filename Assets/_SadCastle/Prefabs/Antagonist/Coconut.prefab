@@ -181,8 +181,8 @@ MonoBehaviour:
   onMidAudio: {fileID: 0}
   onEndAudio: {fileID: 0}
   audioSource: {fileID: 4871205298762628205}
-  endDistance: 7.5
-  height: 4
+  endDistance: 7
+  height: 6
 --- !u!135 &3855676651006487727
 SphereCollider:
   m_ObjectHideFlags: 0
