@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772664262}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e908859ab3a62c4da91fab7cf51f075, type: 3}
   m_Name: 
@@ -2129,6 +2129,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
+      propertyPath: castle
+      value: 
+      objectReference: {fileID: 1401727016}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
       propertyPath: spawnTypes.Array.data[0].spawnPositions.Array.data[0]
       value: 
       objectReference: {fileID: 2055703214}
@@ -2137,6 +2142,16 @@ PrefabInstance:
       propertyPath: spawnTypes.Array.data[0].spawnPositions.Array.data[1]
       value: 
       objectReference: {fileID: 1401655869}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[1].spawnPositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 773156018}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[1].spawnPositions.Array.data[1]
+      value: 
+      objectReference: {fileID: 626115947}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
       propertyPath: spawnTypes.Array.data[2].spawnPositions.Array.data[0]
@@ -2149,46 +2164,24 @@ PrefabInstance:
       objectReference: {fileID: 1182065255}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
-      propertyPath: spawnTypes.Array.data[1].spawnPositions.Array.data[1]
-      value: 
-      objectReference: {fileID: 626115947}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
-      propertyPath: spawnTypes.Array.data[1].spawnPositions.Array.data[0]
-      value: 
-      objectReference: {fileID: 773156018}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
-      propertyPath: castle
-      value: 
-      objectReference: {fileID: 1401727016}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
-      propertyPath: spawnTypes.Array.data[0].entityPrefab
-      value: 
-      objectReference: {fileID: 5746678492221084828, guid: 999c19e8c5a93b14999a047a8229be8d,
-        type: 3}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
-      propertyPath: spawnTypes.Array.data[1].entityPrefab
-      value: 
-      objectReference: {fileID: 2557781495979534780, guid: 4d1af768c0e45d040b307d5fb5d62f28,
-        type: 3}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
-      propertyPath: cooldownDuration
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
-        type: 3}
       propertyPath: lightning
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2146227378}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
       propertyPath: autoSpawn
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[3].spawnPositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 2011980642}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[3].spawnPositions.Array.data[1]
+      value: 
+      objectReference: {fileID: 1182065255}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af55676cb208404dbabfee7db54c18c, type: 3}
 --- !u!1 &1244755790
@@ -2349,7 +2342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401655868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.19, y: 0.96, z: -25.2}
+  m_LocalPosition: {x: 12.19, y: -0.97, z: -25.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2613,6 +2606,75 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &1602923573
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3462554725821657113, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+        type: 3}
+      propertyPath: m_Name
+      value: Lightning
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 063ffbc6ba67e6a42b78263c0d983f30, type: 3}
 --- !u!1001 &1607624277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2866,12 +2928,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055703213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.77, y: 0.96, z: -25.2}
+  m_LocalPosition: {x: -11.77, y: -0.96999997, z: -25.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2146227378 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2146227378, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+    type: 3}
+  m_PrefabInstance: {fileID: 1602923573}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94ea19b5cfddd14cab3673d59a8a3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2102543586163332065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2883,86 +2957,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 333Castle
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475726812403, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474906944260, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474907200844, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474336738414, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475842686748, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475111884204, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474184394531, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475669939180, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474371044815, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475168078028, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474777645571, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475436588895, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475703322015, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475412844590, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474759793921, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474047588726, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 2102543584527696909, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
@@ -3099,6 +3093,86 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1607624278}
+    - target: {fileID: 7929802475436588895, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475412844590, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475842686748, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475726812403, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475703322015, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475669939180, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474907200844, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474906944260, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474777645571, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475168078028, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475111884204, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474371044815, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474336738414, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474759793921, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474184394531, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474047588726, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
     - target: {fileID: 2153908418389720384, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString

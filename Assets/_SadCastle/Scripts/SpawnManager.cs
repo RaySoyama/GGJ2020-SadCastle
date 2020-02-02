@@ -37,9 +37,10 @@ public class SpawnManager : MonoBehaviour
     public bool autoSpawn;
     public float cooldownDuration;
     float spawnTimer;
+    [SerializeField]
     float lastHealthyChunkTimer;
 
-    public Animator lightning;
+    public Entity lightning;
 
     public static SpawnManager instance;
 
@@ -75,7 +76,7 @@ public class SpawnManager : MonoBehaviour
 
             if (lastHealthyChunkTimer > 6)
             {
-                lightning.SetTrigger("DoLightning");
+                lightning.Move();
             }
         }
         else
