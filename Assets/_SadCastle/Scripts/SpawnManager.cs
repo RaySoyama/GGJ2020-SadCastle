@@ -18,7 +18,7 @@ public class SpawnManager : MonoBehaviour
         Wave,
         Tide,
         Meteor,
-        Shark
+        Shark,
     };
 
     [System.Serializable]
@@ -40,7 +40,8 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     float lastHealthyChunkTimer;
 
-    public Entity lightning;
+    public GameObject lightning;
+    bool lightningStrike;
 
     public static SpawnManager instance;
 
@@ -70,13 +71,17 @@ public class SpawnManager : MonoBehaviour
         }
         if (cooldownDuration < 2.5f)
             cooldownDuration = 2.5f;
-        if (Kernel.instance.knownHealthyCastleChunks <= 1)
+        if (autoSpawn && Kernel.instance.knownHealthyCastleChunks <= 1)
         {
-            lastHealthyChunkTimer += Time.deltaTime;
 
-            if (lastHealthyChunkTimer > 6)
+            if (lastHealthyChunkTimer > 2 && lightningStrike == true)
             {
-                lightning.Move();
+                Instantiate(lightning, spawnTypes[4].spawnPositions[0].position, spawnTypes[4].spawnPositions[0].rotation).GetComponent<Entity>();
+                lightningStrike = false;
+            }
+            else
+            {
+                lastHealthyChunkTimer += Time.deltaTime;
             }
         }
         else

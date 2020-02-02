@@ -3,13 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using DG.Tweening;
+using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
     NavMeshAgent agent;
     CastleChunk currentChunk;
 
-    public UnityEventCastleChunk OnChunkRepaired;
+    [FormerlySerializedAs("OnChunkRepaired")]
+    public UnityEventCastleChunk OnChunkRepairStart;
+
+    [Tooltip("Number of seconds to wait before actually repairing the chunk (this should ideally be as long as the animation)")]
+    public float repairDelay = 0.5f;
+
+    List<CastleChunk> chunksInProgress = new List<CastleChunk>();
 
     // Start is called before the first frame update
     void Awake()
@@ -21,10 +29,23 @@ public class Player : MonoBehaviour
     {
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            if (currentChunk && currentChunk.CanRepair())
+            if (currentChunk && currentChunk.CanRepair() && !chunksInProgress.Contains(currentChunk))
             {
-                OnChunkRepaired?.Invoke(currentChunk);
+                chunksInProgress.Add(currentChunk);
+
+                // broadcast that repair job has begun
+                OnChunkRepairStart?.Invoke(currentChunk);
+
+                // look at chunk being repaired
+                Vector3 lookChunk = currentChunk.transform.position;
+                lookChunk.y = transform.position.y;
+                agent.transform.DOKill();
+                agent.transform.DOLookAt(lookChunk, 1.0f);
+
+                // queue repair
                 currentChunk.Repair();
+
+                //DOVirtual.DelayedCall(repairDelay, () => FinalizeChunkRepair(currentChunk));
             }
         }
     }
@@ -38,7 +59,17 @@ public class Player : MonoBehaviour
         agent.SetDestination(chunkPosition);
     }
 
-    
+    private void FinalizeChunkRepair(CastleChunk chunk)
+    {
+        chunksInProgress.Remove(chunk);
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            if (chunk && chunk.CanRepair())
+            {
+                currentChunk.Repair();
+            }
+        }
+    }
 }
 
 [System.Serializable]

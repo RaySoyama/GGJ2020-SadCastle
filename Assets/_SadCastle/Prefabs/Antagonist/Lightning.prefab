@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3462554724630937006}
   - component: {fileID: 3462554724630937005}
   - component: {fileID: 3462554724630937004}
-  - component: {fileID: 3462554724630936995}
   m_Layer: 0
   m_Name: Dark Filter
   m_TagString: Untagged
@@ -78,20 +77,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3462554724630936995
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3462554724630936994}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &3462554725810206651
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +88,6 @@ GameObject:
   - component: {fileID: 3462554725810206631}
   - component: {fileID: 3462554725810206630}
   - component: {fileID: 3462554725810206629}
-  - component: {fileID: 3462554725810206628}
   m_Layer: 0
   m_Name: Lightning Bolt
   m_TagString: Untagged
@@ -170,20 +154,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3462554725810206628
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3462554725810206651}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &3462554725821657113
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,8 +365,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94ea19b5cfddd14cab3673d59a8a3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntityType: 5
   target: {fileID: 0}
+  maxChuncks: 1
   move: 1
   elapsed: 0
   duration: 0
-  destroyTime: 0
+  destroyTime: 1
