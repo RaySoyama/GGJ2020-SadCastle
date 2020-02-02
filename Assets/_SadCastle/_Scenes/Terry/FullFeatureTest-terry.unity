@@ -1135,14 +1135,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772664262}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e908859ab3a62c4da91fab7cf51f075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnTimeline:
   - InGameTime: 3
-    entityName: 12
+    entityName: 6
   time: 0
 --- !u!1 &773156017
 GameObject:
@@ -2160,6 +2160,11 @@ PrefabInstance:
       propertyPath: lightning
       value: 
       objectReference: {fileID: 1223340956}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: autoSpawn
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af55676cb208404dbabfee7db54c18c, type: 3}
 --- !u!95 &1223340956 stripped
@@ -2940,6 +2945,86 @@ PrefabInstance:
       propertyPath: m_Name
       value: 333Castle
       objectReference: {fileID: 0}
+    - target: {fileID: 7929802475726812403, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474906944260, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474907200844, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474336738414, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475842686748, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475111884204, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474184394531, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475669939180, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474371044815, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475168078028, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474777645571, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475436588895, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475703322015, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802475412844590, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474759793921, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929802474047588726, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: CastleChunk
+      objectReference: {fileID: 0}
     - target: {fileID: 2102543584527696909, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3075,86 +3160,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1607624278}
-    - target: {fileID: 7929802475436588895, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475412844590, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475842686748, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475726812403, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475703322015, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475669939180, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474907200844, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474906944260, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474777645571, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475168078028, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802475111884204, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474371044815, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474336738414, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474759793921, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474184394531, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7929802474047588726, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
-        type: 3}
-      propertyPath: m_TagString
-      value: CastleChunk
-      objectReference: {fileID: 0}
     - target: {fileID: 2153908418389720384, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
