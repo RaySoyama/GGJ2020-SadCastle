@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class Bezier
+public static class Curve
 {
     public static Vector3 QuadraticBezier(Vector3 a, Vector3 b, Vector3 c, float t)
     {
