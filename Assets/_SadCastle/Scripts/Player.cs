@@ -43,9 +43,11 @@ public class Player : MonoBehaviour
                 agent.transform.DOLookAt(lookChunk, 1.0f);
 
                 // queue repair
-                currentChunk.Repair();
+                //currentChunk.Repair();
 
-                //DOVirtual.DelayedCall(repairDelay, () => FinalizeChunkRepair(currentChunk));
+                var chunkCapture = currentChunk;
+                var repairCapture = transform.position;
+                DOVirtual.DelayedCall(repairDelay, () => FinalizeChunkRepair(chunkCapture, repairCapture));
             }
         }
     }
@@ -59,14 +61,14 @@ public class Player : MonoBehaviour
         agent.SetDestination(chunkPosition);
     }
 
-    private void FinalizeChunkRepair(CastleChunk chunk)
+    private void FinalizeChunkRepair(CastleChunk chunk, Vector3 repairPosition)
     {
         chunksInProgress.Remove(chunk);
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        if (Vector3.Distance(transform.position, repairPosition) <= agent.stoppingDistance)
         {
             if (chunk && chunk.CanRepair())
             {
-                currentChunk.Repair();
+                chunk.Repair();
             }
         }
     }

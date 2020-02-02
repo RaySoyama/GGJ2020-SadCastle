@@ -2,28 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArcMove : Entity
+public class Bottle : Entity
 {
-    SpriteRenderer sprite;
     public float height;
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
 
-        sprite = GetComponentInChildren<SpriteRenderer>();
-
         start = transform.position;
         mid = Vector3.Lerp(target.position, transform.position, 0.5f) + Vector3.up * height;
-
-        if (transform.position.x < target.position.x)
-        {
-            sprite.flipX = true;
-        }
-        else
-        {
-            sprite.flipX = false;
-        }
     }
 
     public override void Move()
