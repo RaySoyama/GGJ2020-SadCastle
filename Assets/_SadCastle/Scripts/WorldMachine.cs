@@ -8,7 +8,10 @@ public class WorldMachine : MonoBehaviour
     {
         SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Beachball);
     }
-
+    public void SpawnVolleyball()
+    {
+        SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Volleyball);
+    }
     public void SpawnKid()
     {
         SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Kid);
