@@ -25,6 +25,8 @@ public class CursorController : MonoBehaviour
 
     private void Update()
     {
+        if(cursorCamera == null) { cursorCamera = Camera.main; Debug.LogWarning("Cursor Camera was not assigned. Defaulting to main camera..."); }
+
         var pickerRay = cursorCamera.ScreenPointToRay(Input.mousePosition);
         pickerHitCount = Physics.RaycastNonAlloc(pickerRay, pickerHits, Mathf.Infinity, pickerMask, QueryTriggerInteraction.Ignore);
 
@@ -34,6 +36,8 @@ public class CursorController : MonoBehaviour
         }
         else
         {
+            bool matchFound = false;
+
             foreach (var candidateState in cursorStates)
             {
                 var cursorRule = candidateState;
@@ -42,8 +46,15 @@ public class CursorController : MonoBehaviour
                     if (cursorRule.MatchTarget(pickerHits[i].collider.gameObject))
                     {
                         SetCursor(cursorRule);
+                        matchFound = true;
+                        break;
                     }
                 }
+            }
+
+            if(!matchFound)
+            {
+                SetCursor(fallbackCursorState);
             }
         }
     }
