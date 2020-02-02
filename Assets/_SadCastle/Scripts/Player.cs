@@ -43,7 +43,9 @@ public class Player : MonoBehaviour
                 agent.transform.DOLookAt(lookChunk, 1.0f);
 
                 // queue repair
-                DOVirtual.DelayedCall(repairDelay, () => FinalizeChunkRepair(currentChunk));
+                currentChunk.Repair();
+
+                //DOVirtual.DelayedCall(repairDelay, () => FinalizeChunkRepair(currentChunk));
             }
         }
     }
