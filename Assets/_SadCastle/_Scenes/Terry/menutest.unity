@@ -7242,27 +7242,15 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 3
     m_MaxSize: 32
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Corwin
-
-    Corwin
-
-    Corwin
-
-    Corwin
-
-    Corwin
-
-    Corwin
-
-    Corwin
-
-    Corwin'
+  m_Text: "<size=50>Programmers</size>\nShanen Cross\r\nMarcel Dao\r\nTerry Nguyen
+    \r\nRay Soyama \r\n\r\n<size=50>Artists</size>\nCorwin Waldron\r\nAlicia Bozzuto\r\n\r\n<size=50>Audio</size>\r\nBen
+    Gorges"
 --- !u!222 &1412441766
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8396,8 +8384,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 636662154}
   m_HandleRect: {fileID: 636662153}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0.49560875
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
