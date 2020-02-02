@@ -29,6 +29,8 @@ public class SpawnManager : MonoBehaviour
         public Transform[] spawnPositions;
     }
 
+    public Castle castle;
+
     [Header("Spawn Types")]
     public SpawnType[] spawnTypes;
 
@@ -74,7 +76,7 @@ public class SpawnManager : MonoBehaviour
 
         Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos].position, 
             spawnTypes[randInd].spawnPositions[randPos].rotation).GetComponent<Entity>();
-        currentEntity.target = targets[Random.Range(0, targets.Length)];
+        currentEntity.target = castle.GetChunk(Random.Range(0, 3), Random.Range(0, 3)).transform;
     }
 
     public void SpawnEntity(_Entity entity)

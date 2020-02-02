@@ -38,4 +38,12 @@ public class Entity : MonoBehaviour
             Destroy(gameObject, destroyTime);
         }
     }
+
+    public virtual void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("CastleChuck"))
+        {
+            other.GetComponent<CastleChunk>().Destroy();
+        }
+    }
 }

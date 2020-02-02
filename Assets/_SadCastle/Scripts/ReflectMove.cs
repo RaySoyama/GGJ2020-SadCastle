@@ -8,11 +8,14 @@ public class ReflectMove : Entity
     public float endDistance;
     public float height;
     Vector3 end;
+    Collider ballCollider;
     // Start is called before the first frame update
     protected override void Start()
     {
+        ballCollider = GetComponent<Collider>();
         start = transform.position;
-        end = (target.position + (target.position - start) + Vector3.up * height) * endDistance;
+        end = (target.position + (target.position - start)) * endDistance;
+        end = new Vector3(end.x, start.y, end.z);
     }
 
     // Update is called once per frame
@@ -42,5 +45,13 @@ public class ReflectMove : Entity
         Gizmos.DrawSphere(start, 0.3f);
         Gizmos.DrawSphere(target.position, 0.3f);
         Gizmos.DrawSphere(end, 0.3f);
+    }
+    public override void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("CastleChuck"))
+        {
+            other.GetComponent<CastleChunk>().Destroy();
+            //ballCollider.enabled = false;
+        }
     }
 }
