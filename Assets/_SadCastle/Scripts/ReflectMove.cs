@@ -38,12 +38,12 @@ public class ReflectMove : Entity
             transform.position = Vector3.Lerp(target.position, end, (elapsed / duration) - duration / 2);
         }
     }
-    public override void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("CastleChunk"))
-        {
-            other.GetComponent<CastleChunk>().Destroy();
-            //ballCollider.enabled = false;
-        }
-    }
+    //public override void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("CastleChunk"))
+    //    {
+    //        other.GetComponent<CastleChunk>().Destroy();
+    //        //ballCollider.enabled = false;
+    //    }
+    //}
 }

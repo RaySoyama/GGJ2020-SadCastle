@@ -1143,10 +1143,6 @@ MonoBehaviour:
   SpawnTimeline:
   - InGameTime: 3
     entityName: 1
-  - InGameTime: 6
-    entityName: 1
-  - InGameTime: 9
-    entityName: 1
   time: 0
 --- !u!1 &773156017
 GameObject:

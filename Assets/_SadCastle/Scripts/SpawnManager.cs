@@ -24,7 +24,6 @@ public class SpawnManager : MonoBehaviour
     [System.Serializable]
     public class SpawnType
     {
-        public _Entity name;
         public GameObject entityPrefab;
         public Transform[] spawnPositions;
     }
@@ -118,7 +117,7 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < spawnTypes.Length; i++)
         {
-            if (spawnTypes[i].name == name)
+            if (spawnTypes[i].entityPrefab.GetComponent<Entity>().EntityType == name)
             {
                 return spawnTypes[i];
             }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2838959238371882102
+--- !u!1 &977041770695344550
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4261494210665584482}
-  - component: {fileID: 7564200131896392988}
-  - component: {fileID: 6676159679687558367}
+  - component: {fileID: 5034796587279084763}
+  - component: {fileID: 7014204200185665267}
+  - component: {fileID: 1908254392615019618}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -18,27 +18,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4261494210665584482
+--- !u!4 &5034796587279084763
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2838959238371882102}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_GameObject: {fileID: 977041770695344550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
-  m_Father: {fileID: 5746678492221084839}
+  m_Father: {fileID: 3726066018062131025}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!212 &7564200131896392988
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &7014204200185665267
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2838959238371882102}
+  m_GameObject: {fileID: 977041770695344550}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ef0ad76e4dd59384daa13e3dbc7eb313, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3e3ff583f15a09249b86083bb5aa14b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -80,19 +80,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6676159679687558367
+--- !u!114 &1908254392615019618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2838959238371882102}
+  m_GameObject: {fileID: 977041770695344550}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cd378e0ea788be46886a1e9604b0d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5746678492221084828
+--- !u!1 &3726066018062131050
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,57 +100,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5746678492221084839}
-  - component: {fileID: 5746678492221084835}
-  - component: {fileID: -3377035702823559246}
-  - component: {fileID: 4065821751594214938}
+  - component: {fileID: 3726066018062131025}
+  - component: {fileID: 8073217797132725324}
+  - component: {fileID: 3784419818444950010}
+  - component: {fileID: 3855676651006487727}
   m_Layer: 0
-  m_Name: Shark
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5746678492221084839
+--- !u!4 &3726066018062131025
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5746678492221084828}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 3726066018062131050}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.70710677}
   m_LocalPosition: {x: 3.37, y: 0.78, z: 3.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4261494210665584482}
+  - {fileID: 5034796587279084763}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5746678492221084835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5746678492221084828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c42ed02fd008afd43af03c346f7a240c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  move: 1
-  elapsed: 0
-  duration: 2
-  destroyTime: 0
-  height: 5
---- !u!54 &-3377035702823559246
+  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
+--- !u!54 &8073217797132725324
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5746678492221084828}
+  m_GameObject: {fileID: 3726066018062131050}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -160,16 +142,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4065821751594214938
-BoxCollider:
+--- !u!114 &3784419818444950010
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5746678492221084828}
+  m_GameObject: {fileID: 3726066018062131050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3d58fefdd5b5649874e9ede2949f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EntityType: 1
+  target: {fileID: 0}
+  maxChuncks: 1
+  move: 1
+  elapsed: 0
+  duration: 1
+  destroyTime: 1
+  endDistance: 5
+  height: 4
+--- !u!135 &3855676651006487727
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3726066018062131050}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 0.13}
+  m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}
