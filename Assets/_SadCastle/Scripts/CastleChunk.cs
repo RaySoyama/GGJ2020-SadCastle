@@ -15,10 +15,28 @@ public class CastleChunk : MonoBehaviour
     MeshRenderer meshRenderer;
     MeshFilter meshFilter;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip[] destroySounds;
+
+    [SerializeField]
+    private AudioClip[] repairSounds;
+
     void Awake()
     {
         meshRenderer = GetComponentInChildren<MeshRenderer>();
         meshFilter = GetComponentInChildren<MeshFilter>();
+    }
+
+    void Start()
+    {
+        if(audioSource == null)
+        {
+            Debug.LogWarning("AudioSource is missing, attempting to locate one...", this);
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
     void OnMouseOver()
@@ -38,20 +56,33 @@ public class CastleChunk : MonoBehaviour
 
     public void Destroy() 
     {
+        if (isDestroyed) { return; }
+
         isDestroyed = true;
         // meshRenderer.enabled = false;
         meshFilter.mesh = destroyedMesh;
+
+        audioSource.PlayOneShot(destroySounds[Random.Range(0, destroySounds.Length)]);
     }
 
     public void Repair()
     {
+        if (!isDestroyed) { return; }
+
         isDestroyed = false;
         meshFilter.mesh = builtMesh;
         // meshRenderer.enabled = true;
+
+        audioSource.PlayOneShot(repairSounds[Random.Range(0, repairSounds.Length)]);
     }
 
     public bool CanRepair()
     {
         return isDestroyed;
+    }
+
+    void Reset()
+    {
+        audioSource = GetComponent<AudioSource>();
     }
 }
