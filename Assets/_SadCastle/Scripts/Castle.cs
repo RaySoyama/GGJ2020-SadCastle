@@ -6,6 +6,25 @@ public class Castle : MonoBehaviour
 {
     [SerializeField] CastleChunkRow[] castleChunkRows;
 
+    void Awake() 
+    {
+        InitializeChunkRowAndColumnNumbers();
+    }
+
+    void InitializeChunkRowAndColumnNumbers() 
+    {
+        for (int i = 0; i < castleChunkRows.Length; i++)
+        {
+            CastleChunkRow row = castleChunkRows[i];
+            for (int j = 0; j < row.CastleChunks.Length; j++) 
+            {
+                CastleChunk chunk = row.CastleChunks[j];
+
+                chunk.SetRowAndColumnNumbers(i, j);
+            }
+        }
+    }
+
     public int totalCastleChunks
     {
         get
