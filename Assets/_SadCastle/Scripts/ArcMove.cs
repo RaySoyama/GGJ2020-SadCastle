@@ -16,11 +16,11 @@ public class ArcMove : Entity
 
         if (transform.position.x < target.position.x)
         {
-            sprite.flipY = true;
+            sprite.flipX = true;
         }
         else
         {
-            sprite.flipY = false;
+            sprite.flipX = false;
         }
     }
 
