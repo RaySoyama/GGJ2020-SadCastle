@@ -39,6 +39,7 @@ public class Kernel : MonoBehaviour
 
     public void EndGame()
     {
+        if(gameOver) { return; }
         gameOver = true;
         if (uiController == null)
         {
