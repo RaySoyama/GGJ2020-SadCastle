@@ -7,22 +7,23 @@ public class CastleChunk : MonoBehaviour
     [SerializeField] bool isDestroyed = false;
     [SerializeField] Player player;
 
+    [SerializeField] Mesh builtMesh;
+    [SerializeField] Mesh destroyedMesh;
+
     bool wasDestroyed = false;
 
-    MeshRenderer mesh;
+    MeshRenderer meshRenderer;
+    MeshFilter meshFilter;
 
     void Awake()
     {
-        mesh = GetComponent<MeshRenderer>();
-    }
-
-    void Update()
-    {
-        
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshFilter = GetComponent<MeshFilter>();
     }
 
     void OnMouseOver()
     {
+        Debug.Log(Input.mousePosition);
         if (isDestroyed && Input.GetMouseButtonDown(0)) 
         {
             player.MoveTowardsChunk(this);
@@ -39,12 +40,19 @@ public class CastleChunk : MonoBehaviour
     public void Destroy() 
     {
         isDestroyed = true;
-        mesh.enabled = false;
+        // meshRenderer.enabled = false;
+        meshFilter.mesh = destroyedMesh;
     }
 
     public void Repair()
     {
         isDestroyed = false;
-        mesh.enabled = true;
+        meshFilter.mesh = builtMesh;
+        // meshRenderer.enabled = true;
+    }
+
+    public bool CanRepair()
+    {
+        return isDestroyed;
     }
 }

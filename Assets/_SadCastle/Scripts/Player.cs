@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
     {
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            Debug.Log("movement complete");
             if (currentChunk)
             {
                 currentChunk.Repair();
