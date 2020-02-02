@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: MatchByAlways
+  m_Name: MatchByAlwaysTrue
   m_EditorClassIdentifier: Assembly-CSharp::CursorStateMatcher
   type: 0
   tags: []
   components: []
-  always: 0
