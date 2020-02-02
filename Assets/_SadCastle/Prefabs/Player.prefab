@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4224b8513358e7d4eaea8fcd7585cea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnChunkRepaired:
+  OnChunkRepairStart:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5755082976575921278}
@@ -62,6 +62,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEventCastleChunk, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  repairDelay: 1
 --- !u!195 &280746488864373325
 NavMeshAgent:
   m_ObjectHideFlags: 0
