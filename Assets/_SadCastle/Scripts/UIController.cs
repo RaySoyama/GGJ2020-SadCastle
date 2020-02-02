@@ -32,20 +32,20 @@ public class UIController : MonoBehaviour
         houseDisplay.text = string.Format("{0}/{1}", healthyChunks.ToString("00"), knownChunks.ToString("00"));
         houseDisplay.color = Color.Lerp(criticalColor, healthyColor, colorEase.Evaluate(healthyChunks / (float)knownChunks));
 
-        if(!gameOver && healthyChunks == 0)
-        {
-            ShowGameOverPanel();
-        }
+        
     }
 
     [ContextMenu("ShowGameOverPanel")]
-    void ShowGameOverPanel()
+    public void ShowGameOverPanel()
     {
         gameOver = true;
 
         GameOverPanel.anchoredPosition = new Vector2(0, 1080);
         GameOverPanel.DOAnchorPos(Vector2.zero, 0.5f, false).SetDelay(0.5f).SetEase(Ease.OutExpo);
 
+        if(gameOverElapsedDisplay != null)
+            gameOverElapsedDisplay.text = elapsedDisplay.text;
+            
         // too tired gg
 
         // int minutes = (int)Time.timeSinceLevelLoad / 60;
