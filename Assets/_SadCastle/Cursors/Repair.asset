@@ -15,5 +15,4 @@ MonoBehaviour:
   cursorTexture: {fileID: 2800000, guid: d3fb59d20a7073c4cac34f9da8477d30, type: 3}
   cursorHotspot: {x: 0, y: 0}
   matchCriteria:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f51494ffd66be484aaba63d33ce6c06b, type: 2}
