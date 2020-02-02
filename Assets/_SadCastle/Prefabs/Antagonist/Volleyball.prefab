@@ -69,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7768e3f6f0f28ae42b230d003d9cf17d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 364f0486562bb114590277534083015a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 3784419818444950010}
   - component: {fileID: 3855676651006487727}
   m_Layer: 0
-  m_Name: Coconut
+  m_Name: Volleyball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,12 +154,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3d58fefdd5b5649874e9ede2949f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntityType: 6
   target: {fileID: 0}
+  maxChuncks: 2
   move: 1
   elapsed: 0
   duration: 1
   destroyTime: 1
-  endDistance: 5
+  endDistance: 6
   height: 4
 --- !u!135 &3855676651006487727
 SphereCollider:

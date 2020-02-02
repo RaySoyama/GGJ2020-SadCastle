@@ -59,7 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29674f4e65054a4a9e46d3fc1711985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntityType: 0
   target: {fileID: 0}
+  maxChuncks: 3
   move: 1
   elapsed: 0
   duration: 3

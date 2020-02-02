@@ -4,40 +4,23 @@ using UnityEngine;
 
 public class WorldMachine : MonoBehaviour
 {
-    [System.Serializable]
-    struct SpawnTimerObject
+    public void SpawnBeachball()
     {
-        public float InGameTime;
-        public SpawnManager._Entity entityName;
+        SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Beachball);
     }
 
-    SpawnManager spawnManager;
-
-    [SerializeField]
-    private List<SpawnTimerObject> SpawnTimeline = new List<SpawnTimerObject>();
-
-
-    [ReadOnlyField] [SerializeField]
-    private float time = 0;
-
-    
-
-
-    void Start()
+    public void SpawnKid()
     {
-        spawnManager = SpawnManager.instance;
-    
-        
+        SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Kid);
     }
 
-    void Update()
+    public void SpawnShark()
     {
-        time += Time.deltaTime;
-
-        if (SpawnTimeline.Count != 0 && time >= SpawnTimeline[0].InGameTime)
-        {
-            spawnManager.SpawnEntity(SpawnTimeline[0].entityName); // there is an overload with a SpawnManager._Entity parameter
-            SpawnTimeline.RemoveAt(0);
-        }
+        SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Shark);
     }
+
+    //public void SpawnBeachball()
+    //{
+    //    SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Beachball);
+    //}
 }

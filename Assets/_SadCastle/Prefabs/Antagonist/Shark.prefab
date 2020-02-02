@@ -138,7 +138,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42ed02fd008afd43af03c346f7a240c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntityType: 12
   target: {fileID: 0}
+  maxChuncks: 4
   move: 1
   elapsed: 0
   duration: 2
