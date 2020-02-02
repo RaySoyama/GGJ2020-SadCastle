@@ -40,7 +40,12 @@ public class WorldMachine : MonoBehaviour
             AnimationEvent evt = new AnimationEvent() { functionName = "SpawnLightning", time = Time.timeSinceLevelLoad };
             clip.AddEvent(evt);
         }
-
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            SpawnCoconut();
+            AnimationEvent evt = new AnimationEvent() { functionName = "SpawnCoconut", time = Time.timeSinceLevelLoad };
+            clip.AddEvent(evt);
+        }
 
     }
 
@@ -66,5 +71,10 @@ public class WorldMachine : MonoBehaviour
     public void SpawnLightning()
     {
         SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Lightning);
+    }
+    
+    public void SpawnCoconut()
+    {
+        SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Coconut);
     }
 }
