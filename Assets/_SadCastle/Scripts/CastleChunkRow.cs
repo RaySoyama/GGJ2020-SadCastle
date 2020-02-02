@@ -5,8 +5,10 @@ public class CastleChunkRow
 {
     [SerializeField] CastleChunk[] castleChunks;
 
-    public CastleChunk[] CastleChunks {
-        get {
+    public CastleChunk[] CastleChunks 
+    {
+        get 
+        {
             return castleChunks;
         }
     }

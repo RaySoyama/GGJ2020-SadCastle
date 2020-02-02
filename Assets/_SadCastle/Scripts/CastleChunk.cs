@@ -16,11 +16,6 @@ public class CastleChunk : MonoBehaviour
         mesh = GetComponent<MeshRenderer>();
     }
 
-    void Update()
-    {
-        
-    }
-
     void OnMouseOver()
     {
         Debug.Log(Input.mousePosition);
