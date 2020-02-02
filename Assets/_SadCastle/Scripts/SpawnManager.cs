@@ -71,7 +71,7 @@ public class SpawnManager : MonoBehaviour
         }
         if (cooldownDuration < 2.5f)
             cooldownDuration = 2.5f;
-        if (Kernel.instance.knownHealthyCastleChunks <= 1)
+        if (autoSpawn && Kernel.instance.knownHealthyCastleChunks <= 1)
         {
 
             if (lastHealthyChunkTimer > 2 && lightningStrike == true)
