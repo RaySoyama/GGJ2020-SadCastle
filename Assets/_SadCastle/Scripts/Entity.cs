@@ -41,7 +41,7 @@ public class Entity : MonoBehaviour
 
     public virtual void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("CastleChuck"))
+        if (other.CompareTag("CastleChunk"))
         {
             other.GetComponent<CastleChunk>().Destroy();
         }

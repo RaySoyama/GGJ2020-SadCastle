@@ -22,6 +22,7 @@ public class TranslateMove : Entity
         {
             elapsed += Time.deltaTime;
             transform.position = Vector3.Lerp(start, target.position, (elapsed / duration) >= 1 ? 1 : elapsed / duration);
+            transform.LookAt(target.position, Vector3.up);
         }
     }
 }

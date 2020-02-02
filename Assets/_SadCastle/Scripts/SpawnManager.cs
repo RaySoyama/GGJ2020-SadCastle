@@ -37,8 +37,11 @@ public class SpawnManager : MonoBehaviour
     public Transform[] targets;
     [Header("Spawn Cooldown")]
     public bool autoSpawn;
-    public float spawnTimer;
     public float cooldownDuration;
+    float spawnTimer;
+    float lastHealthyChunkTimer;
+
+    public Animator lightning;
 
     public static SpawnManager instance;
 
@@ -66,6 +69,21 @@ public class SpawnManager : MonoBehaviour
         {
             spawnTimer += Time.deltaTime;
         }
+        if (cooldownDuration < 2.5f)
+            cooldownDuration = 2.5f;
+        if (Kernel.instance.knownHealthyCastleChunks <= 1)
+        {
+            lastHealthyChunkTimer += Time.deltaTime;
+
+            if (lastHealthyChunkTimer > 6)
+            {
+                lightning.SetTrigger("DoLightning");
+            }
+        }
+        else
+        {
+            lastHealthyChunkTimer = 0;
+        }
     }
 
     public void SpawnEntity()
@@ -73,6 +91,7 @@ public class SpawnManager : MonoBehaviour
         int randInd = Random.Range(0, spawnTypes.Length);
         int randPos = Random.Range(0, spawnTypes[randInd].spawnPositions.Length);
         spawnTimer = 0;
+        cooldownDuration -= 0.5f;
 
         Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos].position, 
             spawnTypes[randInd].spawnPositions[randPos].rotation).GetComponent<Entity>();

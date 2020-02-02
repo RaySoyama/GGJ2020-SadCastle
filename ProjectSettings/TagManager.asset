@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - SpawnManager
-  - CastleChuck
+  - CastleChunk
   layers:
   - Default
   - TransparentFX

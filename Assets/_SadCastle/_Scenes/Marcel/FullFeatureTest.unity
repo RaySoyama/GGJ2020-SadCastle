@@ -829,6 +829,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
+      propertyPath: spawnTypes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[3].spawnPositions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
       propertyPath: spawnTypes.Array.data[0].spawnPositions.Array.data[0]
       value: 
       objectReference: {fileID: 2055703214}
@@ -879,6 +889,33 @@ PrefabInstance:
       propertyPath: cooldownDuration
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[3].name
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[3].entityPrefab
+      value: 
+      objectReference: {fileID: 3726066018062131050, guid: 74a54c7f99158a04abb32a0d4270d476,
+        type: 3}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[3].spawnPositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 2011980642}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[3].spawnPositions.Array.data[1]
+      value: 
+      objectReference: {fileID: 1182065255}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[2].entityPrefab
+      value: 
+      objectReference: {fileID: 3726066018062131050, guid: 6ab0282f5b4671047872ea99f48b62c6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af55676cb208404dbabfee7db54c18c, type: 3}
 --- !u!1 &1401655868
@@ -999,13 +1036,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407216183}
-  m_LocalRotation: {x: 0.028716914, y: -0.90303814, z: 0.42171544, w: 0.076509}
-  m_LocalPosition: {x: 1.69, y: 7.77, z: 4.95}
+  m_LocalRotation: {x: 0.0020075722, y: -0.965036, z: 0.25897366, w: 0.04042576}
+  m_LocalPosition: {x: 1.69, y: 5, z: 4.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -169.78801, z: 1.1290001}
+  m_LocalEulerAnglesHint: {x: 30, y: -174.9, z: 1.1290001}
 --- !u!1 &1470123687 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7929802475168078028, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
@@ -1593,82 +1630,82 @@ PrefabInstance:
     - target: {fileID: 7929802475436588895, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802475412844590, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802475842686748, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802475726812403, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802475703322015, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802475669939180, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802474907200844, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802474906944260, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802474777645571, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802475168078028, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802475111884204, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802474371044815, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802474336738414, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802474759793921, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802474184394531, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     - target: {fileID: 7929802474047588726, guid: fdbd3c55464b6844c98bc494b7d0d6b1,
         type: 3}
       propertyPath: m_TagString
-      value: CastleChuck
+      value: CastleChunk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdbd3c55464b6844c98bc494b7d0d6b1, type: 3}

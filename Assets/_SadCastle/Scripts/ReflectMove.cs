@@ -38,17 +38,9 @@ public class ReflectMove : Entity
             transform.position = Vector3.Lerp(target.position, end, (elapsed / duration) - duration / 2);
         }
     }
-    public void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-
-        Gizmos.DrawSphere(start, 0.3f);
-        Gizmos.DrawSphere(target.position, 0.3f);
-        Gizmos.DrawSphere(end, 0.3f);
-    }
     public override void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("CastleChuck"))
+        if (other.CompareTag("CastleChunk"))
         {
             other.GetComponent<CastleChunk>().Destroy();
             //ballCollider.enabled = false;
