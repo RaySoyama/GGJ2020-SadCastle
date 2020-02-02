@@ -6426,6 +6426,75 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &363093556544409941
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 363093555575640343, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+        type: 3}
+      propertyPath: m_Name
+      value: Meteor
+      objectReference: {fileID: 0}
+    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -89.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -21
+      objectReference: {fileID: 0}
+    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -123.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.2256009
+      objectReference: {fileID: 0}
+    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7882414
+      objectReference: {fileID: 0}
+    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5697529
+      objectReference: {fileID: 0}
+    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.05622555
+      objectReference: {fileID: 0}
+    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -60.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -225.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 59.324
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b, type: 3}
 --- !u!1001 &2102543586163332065
 PrefabInstance:
   m_ObjectHideFlags: 0
