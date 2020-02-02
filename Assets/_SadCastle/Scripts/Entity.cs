@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Entity : MonoBehaviour
 {
@@ -13,10 +14,33 @@ public class Entity : MonoBehaviour
 
     protected Vector3 start, mid;
 
+    public float elapsedNormalized
+    {
+        get
+        {
+            return elapsed / duration;
+        }
+    }
+
+    public UnityEvent OnSpawn;
+    public UnityEvent OnMid;
+    private bool onMidProcessed = false;
+    public UnityEvent OnEnd;
+    private bool onEndProcessed = false;
+
+    public AudioClip onSpawnAudio;
+    public AudioClip onMidAudio;
+    public AudioClip onEndAudio;
+
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
         start = transform.position;
+
+        OnSpawn?.Invoke();
+        audioSource.PlayOneShot(onSpawnAudio);
     }
 
     protected virtual void Update()
@@ -26,6 +50,18 @@ public class Entity : MonoBehaviour
             Move();
         }
         SelfTerminate();
+        if (!onMidProcessed && elapsedNormalized >= 0.5f)
+        {
+            onMidProcessed = true;
+            OnMid?.Invoke();
+            audioSource.PlayOneShot(onMidAudio);
+        }
+        else if (!onEndProcessed && elapsed >= duration)
+        {
+            onEndProcessed = true;
+            OnEnd?.Invoke();
+            audioSource.PlayOneShot(onEndAudio);
+        }
     }
 
     public virtual void Move()

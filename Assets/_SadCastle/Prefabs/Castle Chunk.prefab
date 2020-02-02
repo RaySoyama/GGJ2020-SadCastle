@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5178207281798584753}
   - component: {fileID: 5178207281798584756}
   - component: {fileID: 5178207281798584757}
+  - component: {fileID: 310429746558626361}
   m_Layer: 0
   m_Name: Castle Chunk
   m_TagString: Untagged
@@ -122,3 +123,116 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDestroyed: 0
+  player: {fileID: 0}
+  builtMesh: {fileID: 0}
+  destroyedMesh: {fileID: 0}
+  audioSource: {fileID: 310429746558626361}
+  destroySounds:
+  - {fileID: 8300000, guid: 3df5af40bfb51b5478186a79b4db7982, type: 3}
+  - {fileID: 8300000, guid: 150e7ba212e2dac4eba0739ad285014a, type: 3}
+  - {fileID: 8300000, guid: ca25ede9f33ceca40af7943dcd3f2c20, type: 3}
+  - {fileID: 8300000, guid: 239c5efdfaba29a469c4380e44e754d3, type: 3}
+  - {fileID: 8300000, guid: f6cb33798941abc4596830a9780d8309, type: 3}
+  - {fileID: 8300000, guid: 122bde4a5385d174f8a188ab4ec2586b, type: 3}
+  repairSounds:
+  - {fileID: 8300000, guid: 2d679ca65ecc0a44c87345ef4d31d847, type: 3}
+  - {fileID: 8300000, guid: 6ab637c9476f7964798b3536e6cbfe81, type: 3}
+  - {fileID: 8300000, guid: ccc080abccb318447a4a373a817e150b, type: 3}
+  - {fileID: 8300000, guid: 4bc3e850d0500994489d1287bfebd2b6, type: 3}
+  - {fileID: 8300000, guid: cc62b62683cf11b4c9f7753799c6a3d8, type: 3}
+--- !u!82 &310429746558626361
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5178207281798584755}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
