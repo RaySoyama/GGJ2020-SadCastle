@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5746678492221084839}
-  - component: {fileID: 5746678492221084835}
   - component: {fileID: -3377035702823559246}
   - component: {fileID: 4065821751594214938}
   - component: {fileID: -4340439939222348693}
@@ -36,48 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5746678492221084835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5746678492221084828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c42ed02fd008afd43af03c346f7a240c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EntityType: 12
-  target: {fileID: 0}
-  maxChuncks: 1
-  move: 1
-  elapsed: 0
-  duration: 2
-  destroyTime: 0
-  OnSpawn:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnMid:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnEnd:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onSpawnAudio:
-  - {fileID: 8300000, guid: 57f4b9bdbfdd4f248af684e9f4493324, type: 3}
-  onMidAudio: []
-  onEndAudio:
-  - {fileID: 8300000, guid: c464114601f651f45948f2f52b7bee19, type: 3}
-  - {fileID: 8300000, guid: 28ead948d4653f4408233da3d75d2959, type: 3}
-  audioSource: {fileID: -4340439939222348693}
-  height: 8
 --- !u!54 &-3377035702823559246
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -118,8 +75,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.747
+  m_PlayOnAwake: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -218,10 +175,10 @@ MonoBehaviour:
   EntityType: 3
   target: {fileID: 0}
   maxChuncks: 1
-  move: 0
+  move: 1
   elapsed: 0
   duration: 3
-  destroyTime: 0
+  destroyTime: 4
   OnSpawn:
     m_PersistentCalls:
       m_Calls: []
@@ -237,8 +194,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  onSpawnAudio: []
-  onMidAudio: []
+  onSpawnAudio:
+  - {fileID: 0}
+  onMidAudio:
+  - {fileID: 8300000, guid: 55fbb45dc71b07f40b135651f61d1a2d, type: 3}
   onEndAudio: []
   audioSource: {fileID: 0}
   height: 8

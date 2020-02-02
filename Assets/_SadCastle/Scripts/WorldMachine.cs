@@ -49,7 +49,7 @@ public class WorldMachine : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.S))
         {
-            SpawnMeteor();
+            SpawnBottle();
             AnimationEvent evt = new AnimationEvent() { functionName = "SpawnBottle", time = Time.timeSinceLevelLoad };
             clip.AddEvent(evt);
         }

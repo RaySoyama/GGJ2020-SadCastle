@@ -97,12 +97,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  onSpawnAudio:
-  - {fileID: 0}
+  onSpawnAudio: []
   onMidAudio:
   - {fileID: 8300000, guid: d2763e9d0dd583f4081e1631a9a3fe60, type: 3}
   - {fileID: 8300000, guid: 77ab9fcee7700094ea4c141d1bb5df42, type: 3}
-  - {fileID: 0}
   onEndAudio:
   - {fileID: 0}
   audioSource: {fileID: 0}
