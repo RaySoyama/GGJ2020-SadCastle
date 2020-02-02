@@ -6,7 +6,7 @@ public class Castle : MonoBehaviour
 {
     [SerializeField] CastleChunkRow[] castleChunkRows;
 
-    CastleChunk GetChunk(int row, int column) 
+    public CastleChunk GetChunk(int row, int column) 
     {
         return castleChunkRows[row].CastleChunks[column];
     }

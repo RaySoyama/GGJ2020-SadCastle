@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnTypes:
-  - name: 1
+  - name: 12
     entityPrefab: {fileID: 5746678492221084828, guid: 999c19e8c5a93b14999a047a8229be8d,
       type: 3}
     spawnPositions:
@@ -56,8 +56,19 @@ MonoBehaviour:
     spawnPositions:
     - {fileID: 0}
     - {fileID: 0}
+  - name: 1
+    entityPrefab: {fileID: 3726066018062131050, guid: 6ab0282f5b4671047872ea99f48b62c6,
+      type: 3}
+    spawnPositions:
+    - {fileID: 0}
+    - {fileID: 0}
   targets:
   - {fileID: 0}
-  autoSpawn: 0
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  autoSpawn: 1
   spawnTimer: 0
   cooldownDuration: 2

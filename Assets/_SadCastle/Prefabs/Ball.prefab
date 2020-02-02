@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3726066018062131025}
   - component: {fileID: 3726066018062131030}
   - component: {fileID: 3726066018062131031}
-  - component: {fileID: 3726066018062131028}
   - component: {fileID: 8073217797132725324}
   - component: {fileID: 3784419818444950010}
+  - component: {fileID: 3855676651006487727}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -80,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3726066018062131028
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3726066018062131050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8073217797132725324
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,5 +113,18 @@ MonoBehaviour:
   elapsed: 0
   duration: 1
   destroyTime: 1
-  endDistance: 2
-  height: 2
+  endDistance: 4
+  height: 4
+--- !u!135 &3855676651006487727
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3726066018062131050}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Center: {x: 0, y: 0, z: 0}

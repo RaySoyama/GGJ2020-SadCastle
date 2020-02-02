@@ -1,9 +1,15 @@
-﻿Shader "Ray Shaders/UnlitTransparentCutoutWithColor"
+﻿Shader "Ray Shaders/ThunderEffectShader"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-		_Color ("Color", Color) = (1,1,1,1)
+        _NoiseTex ("Noise", 2D) = "white" {}
+		_Color("Color", Color) = (1,1,1,1)
+		_LineSize("Lightning Size", Range(0.0,1.0)) = 0.1
+		_Speed("Noise Speed", Float) = 0.01
+		_Noise("Noise Amount", Float) = 0.01
+
+		_VerticalCut("Vertical Cutoff", Range(0,1)) = 1
     }
     SubShader
     {
@@ -11,9 +17,8 @@
 		LOD 100
 		ZWrite On
 		Blend SrcAlpha OneMinusSrcAlpha
-        
-		
-		Pass
+
+        Pass
         {
             CGPROGRAM
             #pragma vertex vert
@@ -38,24 +43,43 @@
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
+			
+			sampler2D _NoiseTex;
+			float4 _NoiseTex_ST;
 
+			float _LineSize;
 			float4 _Color;
+
+			float _Speed;
+			float _Noise;
+
+			float _VerticalCut;
 
             v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-                UNITY_TRANSFER_FOG(o,o.vertex);
+
+
+				UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
-            {
-                // sample the texture
-                fixed4 col = tex2D(_MainTex, i.uv);
-                // apply fog
-                UNITY_APPLY_FOG(i.fogCoord, col);
+			{
+				// sample the texture
+				fixed4 col = tex2D(_MainTex, i.uv);
+				// apply fog
+				UNITY_APPLY_FOG(i.fogCoord, col);
+				
+				//determine noise
+				fixed4 noise = tex2D(_NoiseTex, float2(i.uv.x * _NoiseTex_ST.x - _Time.y * _Speed, i.uv.y * _NoiseTex_ST.y + _Time.y * _Speed ));
+
+				//Make Line
+
+				col.a = step((0.5f - _LineSize / 2) + (noise.r - 0.5f) * _Noise, i.uv.x) * (1 - step((0.5f + _LineSize / 2) + (noise.r - 0.5f) * _Noise, i.uv.x)) * step(1.0f - _VerticalCut, 1.0f - i.uv.y);
+					
 				return col * _Color;
             }
             ENDCG
