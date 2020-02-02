@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using DG.Tweening;
 
@@ -9,6 +10,11 @@ public class MenuController : MonoBehaviour
     public UnityEventBool OnMenuVisibilityChanged;
     public UnityEventGameObject OnMenuStateChanged;
 
+    [SerializeField]
+    private Camera menuCamera;
+    [SerializeField]
+    private float cameraZoomDelay = 0.2f;
+
     public bool isMenuVisible;
 
     public float startDelaySeconds = 0.0f;
@@ -16,6 +22,9 @@ public class MenuController : MonoBehaviour
 
     public GameObject[] panels;
     public GameObject defaultActivePanel;
+
+    [SerializeField]
+    private Image screenSpaceColorQuad;
 
     public bool canHide;
 
@@ -82,9 +91,9 @@ public class MenuController : MonoBehaviour
     }
 
     [ContextMenu("Hide Menu")]
-    public void HideMenu()
+    public void HideMenu(bool force=false)
     {
-        if(!canHide) { return; }
+        if(!canHide && !force) { return; }
 
         OnMenuVisibilityChanged?.Invoke(false);
 
@@ -98,7 +107,35 @@ public class MenuController : MonoBehaviour
         isMenuVisible = false;
     }
 
+    public float transitionToGameDuration = 1.0f;
+
+    public void PlayGame()
+    {
+        canHide = true;
+        HideMenu(true);
+
+        screenSpaceColorQuad.DOColor(Color.white, transitionToGameDuration).SetDelay(cameraZoomDelay).SetEase(Ease.InCubic);
+        menuCamera.DOFieldOfView(20, transitionToGameDuration).SetDelay(cameraZoomDelay);
+        //menuCamera.transform.DOLookAt(menuCamera.transform.position + Vector3.right * 20.968f, 0.5f);
+        menuCamera.transform.DORotate(Vector3.right * 20.968f, transitionToGameDuration);
+
+        DOVirtual.DelayedCall(cameraZoomDelay + 1.0f, () => Debug.Log("gogo"));
+    }
+
     public void ExitGame()
+    {
+        canHide = true;
+        HideMenu(true);
+
+        screenSpaceColorQuad.DOColor(Color.black, transitionToGameDuration).SetDelay(cameraZoomDelay).SetEase(Ease.InCubic);
+        menuCamera.DOFieldOfView(20, transitionToGameDuration).SetDelay(cameraZoomDelay);
+        //menuCamera.transform.DOLookAt(menuCamera.transform.position + Vector3.right * 20.968f, 0.5f);
+        menuCamera.transform.DORotate(Vector3.right * -20.968f, transitionToGameDuration);
+
+        DOVirtual.DelayedCall(cameraZoomDelay + 1.0f, () => ActuallyExitGame());
+    }
+
+    private void ActuallyExitGame()
     {
         Application.Quit();
 
