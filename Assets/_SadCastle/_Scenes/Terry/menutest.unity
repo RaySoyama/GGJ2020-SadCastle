@@ -6391,8 +6391,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6673,8 +6673,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 481057595}
   m_HandleRect: {fileID: 481057594}
   m_Direction: 0
-  m_Value: 1
-  m_Size: 0.99999994
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7695,7 +7695,7 @@ MonoBehaviour:
   defaultActivePanel: {fileID: 179814686}
   screenSpaceColorQuad: {fileID: 1129367402}
   canHide: 0
-  gameSceneName: FullFeatureTest
+  gameSceneName: FullFeatureTest-terry
   elements:
   - elementRect: {fileID: 975144020}
     startPosition: {x: 0, y: 1080}
@@ -7740,7 +7740,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0.000030517578}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1722036749
@@ -8327,8 +8327,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 636662154}
   m_HandleRect: {fileID: 636662153}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.49560875
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8454,7 +8454,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1775040752}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.9999999
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

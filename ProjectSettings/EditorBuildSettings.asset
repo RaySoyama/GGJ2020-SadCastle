@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/_SadCastle/_Scenes/Terry/menutest.unity
     guid: cec73ba17232f79499f5a90637017b36
   - enabled: 1
-    path: Assets/_SadCastle/_Scenes/Marcel/FullFeatureTest.unity
-    guid: 924518ddf8978944a87f8883128b77a6
+    path: Assets/_SadCastle/_Scenes/Terry/FullFeatureTest-terry.unity
+    guid: 3acebd444b29b1846a3ab7645e7901e6
   m_configObjects: {}

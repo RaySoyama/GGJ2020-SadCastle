@@ -20,6 +20,7 @@ public class FadeToClearOnStart : MonoBehaviour
     {
         target.color = Color.white;
         target.DOColor(Color.clear, duration).SetDelay(delay).OnComplete(()=>OnFinish());
+        transform.SetAsLastSibling();
     }
 
     void OnFinish()
