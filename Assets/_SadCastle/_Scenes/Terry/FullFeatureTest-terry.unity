@@ -105,7 +105,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.3
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -113,13 +113,13 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.1
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: c6752fbc95b9e8b4199a692544fdc532, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 1b745e10d4b50604a83643dce8220ce6, type: 2}
 --- !u!1 &35678408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1142,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnTimeline:
   - InGameTime: 3
-    entityName: 6
+    entityName: 1
+  - InGameTime: 6
+    entityName: 1
+  - InGameTime: 9
+    entityName: 1
   time: 0
 --- !u!1 &773156017
 GameObject:
@@ -1533,7 +1537,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!108 &1026679837
 Light:
@@ -2159,7 +2163,7 @@ PrefabInstance:
         type: 3}
       propertyPath: lightning
       value: 
-      objectReference: {fileID: 1223340956}
+      objectReference: {fileID: 0}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
       propertyPath: autoSpawn
@@ -2167,12 +2171,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af55676cb208404dbabfee7db54c18c, type: 3}
---- !u!95 &1223340956 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3462554725821657115, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-    type: 3}
-  m_PrefabInstance: {fileID: 1959579410}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1244755790
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,75 +2750,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1001 &1959579410
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3462554725821657113, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-      propertyPath: m_Name
-      value: Lightning
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462554725821657114, guid: 063ffbc6ba67e6a42b78263c0d983f30,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 063ffbc6ba67e6a42b78263c0d983f30, type: 3}
 --- !u!1 &2011980641
 GameObject:
   m_ObjectHideFlags: 0
