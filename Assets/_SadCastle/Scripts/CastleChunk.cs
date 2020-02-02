@@ -17,8 +17,8 @@ public class CastleChunk : MonoBehaviour
 
     void Awake()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
-        meshFilter = GetComponent<MeshFilter>();
+        meshRenderer = GetComponentInChildren<MeshRenderer>();
+        meshFilter = GetComponentInChildren<MeshFilter>();
     }
 
     void OnMouseOver()
