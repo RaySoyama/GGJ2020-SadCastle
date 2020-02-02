@@ -40,6 +40,12 @@ public class Entity : MonoBehaviour
         start = transform.position;
 
         OnSpawn?.Invoke();
+        if(audioSource == null)
+        {
+            Debug.LogWarning("AudioSource is missing. Attempting to add one...");
+            audioSource = GetComponent<AudioSource>();
+            if(audioSource == null) { audioSource = gameObject.AddComponent<AudioSource>(); }
+        }
         audioSource.PlayOneShot(onSpawnAudio);
     }
 
