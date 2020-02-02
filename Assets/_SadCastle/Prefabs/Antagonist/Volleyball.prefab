@@ -184,8 +184,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f68dec0e41cd088438f5c7044f97ea73, type: 3}
   onEndAudio:
   - {fileID: 8300000, guid: ca5662c9151b6ce459039fc6b18ef401, type: 3}
-  - {fileID: 8300000, guid: 7149e39879076774c8236aa76924bb42, type: 3}
-  - {fileID: 0}
   - {fileID: 0}
   audioSource: {fileID: 5488833979761178192}
   endDistance: 7
