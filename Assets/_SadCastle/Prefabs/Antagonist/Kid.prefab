@@ -97,9 +97,14 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  onSpawnAudio: []
-  onMidAudio: []
-  onEndAudio: []
+  onSpawnAudio:
+  - {fileID: 0}
+  onMidAudio:
+  - {fileID: 8300000, guid: d2763e9d0dd583f4081e1631a9a3fe60, type: 3}
+  - {fileID: 8300000, guid: 77ab9fcee7700094ea4c141d1bb5df42, type: 3}
+  - {fileID: 0}
+  onEndAudio:
+  - {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!1001 &7972474471985097769
 PrefabInstance:
@@ -113,11 +118,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antagonist Run
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 5899c558ebac5a94e940376656ed9845,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 0dca7a267dc08ef489ad62c9a28b0204, type: 2}
     - target: {fileID: -4216859302048453862, guid: 5899c558ebac5a94e940376656ed9845,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -173,6 +173,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 5899c558ebac5a94e940376656ed9845,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0dca7a267dc08ef489ad62c9a28b0204, type: 2}
     - target: {fileID: 5028718047351560071, guid: 5899c558ebac5a94e940376656ed9845,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -161,9 +161,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  onSpawnAudio: {fileID: 8300000, guid: 57f4b9bdbfdd4f248af684e9f4493324, type: 3}
-  onMidAudio: {fileID: 0}
-  onEndAudio: {fileID: 8300000, guid: c464114601f651f45948f2f52b7bee19, type: 3}
+  onSpawnAudio:
+  - {fileID: 8300000, guid: 57f4b9bdbfdd4f248af684e9f4493324, type: 3}
+  onMidAudio: []
+  onEndAudio:
+  - {fileID: 8300000, guid: c464114601f651f45948f2f52b7bee19, type: 3}
+  - {fileID: 8300000, guid: 28ead948d4653f4408233da3d75d2959, type: 3}
   audioSource: {fileID: -4340439939222348693}
   height: 10
 --- !u!54 &-3377035702823559246

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using static AudioClipHelper;
+
 public class CastleChunk : MonoBehaviour
 {
     int rowNumber;
@@ -22,9 +24,11 @@ public class CastleChunk : MonoBehaviour
 
     [SerializeField]
     private AudioClip[] destroySounds;
+    private static AudioClip lastDestroySound;
 
     [SerializeField]
     private AudioClip[] repairSounds;
+    public static AudioClip lastRepairSound;
 
     void Awake()
     {
@@ -39,6 +43,10 @@ public class CastleChunk : MonoBehaviour
         {
             Debug.LogWarning("AudioSource is missing, attempting to locate one...", this);
             audioSource = GetComponent<AudioSource>();
+            if (audioSource == null)
+            {
+                audioSource = gameObject.AddComponent<AudioSource>();
+            }
         }
     }
 
@@ -65,13 +73,12 @@ public class CastleChunk : MonoBehaviour
 
     public void Destroy() 
     {
-        if (isDestroyed) { return; }
-
         isDestroyed = true;
         // meshRenderer.enabled = false;
         meshFilter.mesh = destroyedMesh;
 
-        audioSource.PlayOneShot(destroySounds[Random.Range(0, destroySounds.Length)]);
+        lastDestroySound = GRCETOUOO(destroySounds, lastDestroySound);
+        audioSource.PlayOneShot(lastDestroySound);
     }
 
     public void Repair()
@@ -82,7 +89,8 @@ public class CastleChunk : MonoBehaviour
         meshFilter.mesh = builtMesh;
         // meshRenderer.enabled = true;
 
-        audioSource.PlayOneShot(repairSounds[Random.Range(0, repairSounds.Length)]);
+        lastRepairSound = GRCETOUOO(repairSounds, lastRepairSound);
+        audioSource.PlayOneShot(lastRepairSound);
     }
 
     public bool CanRepair()
