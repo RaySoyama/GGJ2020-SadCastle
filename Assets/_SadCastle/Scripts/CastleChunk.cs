@@ -43,6 +43,10 @@ public class CastleChunk : MonoBehaviour
         {
             Debug.LogWarning("AudioSource is missing, attempting to locate one...", this);
             audioSource = GetComponent<AudioSource>();
+            if (audioSource == null)
+            {
+                audioSource = gameObject.AddComponent<AudioSource>();
+            }
         }
     }
 
