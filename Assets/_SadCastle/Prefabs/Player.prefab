@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 280746488864373323}
   - component: {fileID: 280746488864373324}
   - component: {fileID: 280746488864373325}
+  - component: {fileID: 5755082976575921278}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -45,6 +46,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4224b8513358e7d4eaea8fcd7585cea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnChunkRepaired:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5755082976575921278}
+        m_MethodName: HandleChunkRepair
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEventCastleChunk, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!195 &280746488864373325
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -67,6 +84,21 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5755082976575921278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280746488864373322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c8f7226a9142d408f86932170db68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 7451414865545770470}
+  agent: {fileID: 280746488864373325}
+  numberOfRepairAnimations: 2
 --- !u!1001 &5519171618672653190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79,11 +111,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Char Kid T-Pose
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 54c928a4ac961cf4686a04486e0e70e6,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e7af3b0bffcf3104ab061fe0a5e41a1a, type: 2}
     - target: {fileID: -4216859302048453862, guid: 54c928a4ac961cf4686a04486e0e70e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -139,6 +166,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 54c928a4ac961cf4686a04486e0e70e6,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e7af3b0bffcf3104ab061fe0a5e41a1a, type: 2}
     - target: {fileID: 5028718047351560071, guid: 54c928a4ac961cf4686a04486e0e70e6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -149,6 +181,12 @@ PrefabInstance:
 --- !u!4 &712340146929735836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 54c928a4ac961cf4686a04486e0e70e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 5519171618672653190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7451414865545770470 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 54c928a4ac961cf4686a04486e0e70e6,
     type: 3}
   m_PrefabInstance: {fileID: 5519171618672653190}
   m_PrefabAsset: {fileID: 0}

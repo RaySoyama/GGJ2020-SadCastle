@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
+
 public class Player : MonoBehaviour
 {
     NavMeshAgent agent;
     CastleChunk currentChunk;
+
+    public UnityEventCastleChunk OnChunkRepaired;
 
     // Start is called before the first frame update
     void Awake()
@@ -17,8 +21,9 @@ public class Player : MonoBehaviour
     {
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            if (currentChunk)
+            if (currentChunk && currentChunk.CanRepair())
             {
+                OnChunkRepaired?.Invoke(currentChunk);
                 currentChunk.Repair();
             }
         }
@@ -35,3 +40,6 @@ public class Player : MonoBehaviour
 
     
 }
+
+[System.Serializable]
+public class UnityEventCastleChunk : UnityEvent<CastleChunk> { }
