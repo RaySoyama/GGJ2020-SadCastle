@@ -34,7 +34,6 @@ public class SpawnManager : MonoBehaviour
     [Header("Spawn Types")]
     public SpawnType[] spawnTypes;
 
-    public Transform[] targets;
     [Header("Spawn Cooldown")]
     public bool autoSpawn;
     public float cooldownDuration;
@@ -112,7 +111,7 @@ public class SpawnManager : MonoBehaviour
 
         Entity currentEntity = Instantiate(currentSpawnType.entityPrefab, currentSpawnType.spawnPositions[randPos].position,
             currentSpawnType.spawnPositions[randPos].rotation).GetComponent<Entity>();
-        currentEntity.target = targets[Random.Range(0, targets.Length)];
+        currentEntity.target = castle.GetChunk(Random.Range(0, 3), Random.Range(0, 3)).transform;
     }
 
     public SpawnType GetEntity(_Entity name)
