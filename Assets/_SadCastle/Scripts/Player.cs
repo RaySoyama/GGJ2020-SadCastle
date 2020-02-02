@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
         currentChunk = chunk;
 
         Vector3 chunkPosition = chunk.transform.position;
-        // transform.position = chunkPosition;
+        Debug.Log(chunkPosition.ToString("F20"));
         agent.SetDestination(chunkPosition);
     }
 

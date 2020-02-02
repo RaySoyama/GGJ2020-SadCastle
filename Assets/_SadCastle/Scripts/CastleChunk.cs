@@ -23,7 +23,6 @@ public class CastleChunk : MonoBehaviour
 
     void OnMouseOver()
     {
-        Debug.Log(Input.mousePosition);
         if (isDestroyed && Input.GetMouseButtonDown(0)) 
         {
             player.MoveTowardsChunk(this);
