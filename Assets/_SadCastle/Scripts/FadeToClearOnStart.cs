@@ -13,8 +13,20 @@ public class FadeToClearOnStart : MonoBehaviour
     [SerializeField]
     float delay;
 
+    [SerializeField]
+    bool destroyOnComplete;
+
     void Start()
     {
-        target.DOColor(Color.clear, duration).SetDelay(delay);
+        target.color = Color.white;
+        target.DOColor(Color.clear, duration).SetDelay(delay).OnComplete(()=>OnFinish());
+    }
+
+    void OnFinish()
+    {
+        if(destroyOnComplete)
+        {
+            Destroy(gameObject);
+        }
     }
 }

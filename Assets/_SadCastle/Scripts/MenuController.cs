@@ -28,6 +28,8 @@ public class MenuController : MonoBehaviour
 
     public bool canHide;
 
+    public string gameSceneName;
+
     public void SetActivePanel(GameObject newActivePanel)
     {
         foreach(var pan in panels)
@@ -119,7 +121,7 @@ public class MenuController : MonoBehaviour
         //menuCamera.transform.DOLookAt(menuCamera.transform.position + Vector3.right * 20.968f, 0.5f);
         menuCamera.transform.DORotate(Vector3.right * 20.968f, transitionToGameDuration);
 
-        DOVirtual.DelayedCall(cameraZoomDelay + 1.0f, () => Debug.Log("gogo"));
+        DOVirtual.DelayedCall(transitionToGameDuration + cameraZoomDelay + 1.0f, () => UnityEngine.SceneManagement.SceneManager.LoadScene(gameSceneName));
     }
 
     public void ExitGame()
@@ -127,12 +129,13 @@ public class MenuController : MonoBehaviour
         canHide = true;
         HideMenu(true);
 
+        screenSpaceColorQuad.color = Color.black * new Color(0,0,0,0);
         screenSpaceColorQuad.DOColor(Color.black, transitionToGameDuration).SetDelay(cameraZoomDelay).SetEase(Ease.InCubic);
         menuCamera.DOFieldOfView(20, transitionToGameDuration).SetDelay(cameraZoomDelay);
         //menuCamera.transform.DOLookAt(menuCamera.transform.position + Vector3.right * 20.968f, 0.5f);
         menuCamera.transform.DORotate(Vector3.right * -20.968f, transitionToGameDuration);
 
-        DOVirtual.DelayedCall(cameraZoomDelay + 1.0f, () => ActuallyExitGame());
+        DOVirtual.DelayedCall(transitionToGameDuration + cameraZoomDelay + 1.0f, () => ActuallyExitGame());
     }
 
     private void ActuallyExitGame()
