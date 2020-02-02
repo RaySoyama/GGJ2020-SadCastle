@@ -221,7 +221,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b398e6718be71764f8d49481d99b3e19, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2f20c21f015dbb549aa1624eb75dd845, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -371,4 +371,23 @@ MonoBehaviour:
   move: 1
   elapsed: 0
   duration: 0
-  destroyTime: 1
+  destroyTime: 5
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnMid:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onSpawnAudio: {fileID: 0}
+  onMidAudio: {fileID: 0}
+  onEndAudio: {fileID: 0}
+  audioSource: {fileID: 0}

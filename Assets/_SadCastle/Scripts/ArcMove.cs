@@ -9,6 +9,8 @@ public class ArcMove : Entity
     // Start is called before the first frame update
     protected override void Start()
     {
+        base.Start();
+
         sprite = GetComponentInChildren<SpriteRenderer>();
 
         start = transform.position;

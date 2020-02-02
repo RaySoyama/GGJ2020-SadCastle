@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class CastleChunk : MonoBehaviour
 {
+    int rowNumber;
+    int columnNumber;
     [SerializeField] bool isDestroyed = false;
     [SerializeField] Player player;
 
     [SerializeField] Mesh builtMesh;
     [SerializeField] Mesh destroyedMesh;
 
-    bool wasDestroyed = false;
-
     MeshRenderer meshRenderer;
     MeshFilter meshFilter;
+
+    Castle castle;
 
     [SerializeField]
     private AudioSource audioSource;
@@ -28,6 +30,7 @@ public class CastleChunk : MonoBehaviour
     {
         meshRenderer = GetComponentInChildren<MeshRenderer>();
         meshFilter = GetComponentInChildren<MeshFilter>();
+        castle = GetComponentInParent<Castle>();
     }
 
     void Start()
@@ -37,6 +40,12 @@ public class CastleChunk : MonoBehaviour
             Debug.LogWarning("AudioSource is missing, attempting to locate one...", this);
             audioSource = GetComponent<AudioSource>();
         }
+    }
+
+    public void SetRowAndColumnNumbers(int row, int column)
+    {
+        rowNumber = row;
+        columnNumber = column;
     }
 
     void OnMouseOver()

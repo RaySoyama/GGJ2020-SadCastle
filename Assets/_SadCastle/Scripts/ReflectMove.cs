@@ -12,6 +12,7 @@ public class ReflectMove : Entity
     // Start is called before the first frame update
     protected override void Start()
     {
+        base.Start();
         ballCollider = GetComponent<Collider>();
         start = transform.position;
         end = (target.position + (target.position - start)) * endDistance;

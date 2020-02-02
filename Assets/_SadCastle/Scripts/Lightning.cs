@@ -8,6 +8,7 @@ public class Lightning : Entity
     // Start is called before the first frame update
     protected override void Start()
     {
+        base.Start();
         anim = GetComponent<Animator>();
     }
 

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+using static AudioClipHelper;
+
 public class Entity : MonoBehaviour
 {
     public SpawnManager._Entity EntityType;
@@ -28,9 +30,12 @@ public class Entity : MonoBehaviour
     public UnityEvent OnEnd;
     private bool onEndProcessed = false;
 
-    public AudioClip onSpawnAudio;
-    public AudioClip onMidAudio;
-    public AudioClip onEndAudio;
+    public AudioClip[] onSpawnAudio;
+    private static AudioClip lastSpawnAudio;
+    public AudioClip[] onMidAudio;
+    private static AudioClip lastMidAudio;
+    public AudioClip[] onEndAudio;
+    private static AudioClip lastEndAudio;
 
     public AudioSource audioSource;
 
@@ -40,7 +45,15 @@ public class Entity : MonoBehaviour
         start = transform.position;
 
         OnSpawn?.Invoke();
-        audioSource.PlayOneShot(onSpawnAudio);
+        if(audioSource == null)
+        {
+            Debug.LogWarning("AudioSource is missing. Attempting to add one...");
+            audioSource = GetComponent<AudioSource>();
+            if(audioSource == null) { audioSource = gameObject.AddComponent<AudioSource>(); }
+        }
+
+        lastSpawnAudio = GRCETOUOO(onSpawnAudio, lastSpawnAudio);
+        audioSource.PlayOneShot(lastSpawnAudio);
     }
 
     protected virtual void Update()
@@ -54,13 +67,15 @@ public class Entity : MonoBehaviour
         {
             onMidProcessed = true;
             OnMid?.Invoke();
-            audioSource.PlayOneShot(onMidAudio);
+            lastMidAudio = GRCETOUOO(onMidAudio, lastMidAudio);
+            audioSource.PlayOneShot(lastMidAudio);
         }
         else if (!onEndProcessed && elapsed >= duration)
         {
             onEndProcessed = true;
             OnEnd?.Invoke();
-            audioSource.PlayOneShot(onEndAudio);
+            lastEndAudio = GRCETOUOO(onEndAudio, lastEndAudio);
+            audioSource.PlayOneShot(lastEndAudio);
         }
     }
 
@@ -87,5 +102,38 @@ public class Entity : MonoBehaviour
                 other.GetComponent<CastleChunk>().Destroy();
             }
         }
+    }
+}
+
+public static class AudioClipHelper
+{
+    public static AudioClip GRCETOUOO(AudioClip[] clips, AudioClip avoid = null)
+    {
+        return GetRandomClipExceptThisOneUnlessOnlyOne(clips, avoid);
+    }
+    public static AudioClip GetRandomClipExceptThisOneUnlessOnlyOne(AudioClip[] clips, AudioClip avoid)
+    {
+        if (clips == null || clips.Length == 0) { return null; }
+        if (clips.Length == 1) { return clips[0]; }
+
+        int finalIndex = Random.Range(0, clips.Length);
+
+        int avoidIndex = -1;
+        if (avoid != null)
+        {
+            for (int i = 0; i < clips.Length; ++i)
+            {
+                if (clips[i] == avoid) { avoidIndex = i; break; }
+            }
+        }
+
+        if(avoidIndex != -1)
+        {
+            int offset = Random.Range(0, clips.Length - 1);
+            finalIndex = (avoidIndex + offset) % clips.Length;
+        }
+
+        return clips[finalIndex];
+
     }
 }
