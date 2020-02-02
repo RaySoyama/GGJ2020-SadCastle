@@ -731,6 +731,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &206153188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 206153189}
+  m_Layer: 0
+  m_Name: Meteor Spawn Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &206153189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206153188}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -89.2, y: -21, z: 123.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &231882791
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,6 +986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b0c5731603b4e41babf9a0c38b3e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiController: {fileID: 1133566548}
   castle: {fileID: 1401727016}
 --- !u!1 &274124298 stripped
 GameObject:
@@ -4110,7 +4141,7 @@ PrefabInstance:
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
       propertyPath: spawnTypes.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
@@ -4121,6 +4152,11 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnTypes.Array.data[5].spawnPositions.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[6].spawnPositions.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
@@ -4208,6 +4244,22 @@ PrefabInstance:
     - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
         type: 3}
       propertyPath: spawnTypes.Array.data[5].spawnPositions.Array.data[1]
+      value: 
+      objectReference: {fileID: 1182065255}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[6].entityPrefab
+      value: 
+      objectReference: {fileID: 363093555575640343, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+        type: 3}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[6].spawnPositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 206153189}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: spawnTypes.Array.data[6].spawnPositions.Array.data[1]
       value: 
       objectReference: {fileID: 1182065255}
     m_RemovedComponents: []
@@ -5793,7 +5845,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1935204697 stripped
 GameObject:
@@ -6328,7 +6380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2100314542
 AudioSource:
@@ -6426,75 +6478,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1001 &363093556544409941
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 363093555575640343, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
-        type: 3}
-      propertyPath: m_Name
-      value: Meteor
-      objectReference: {fileID: 0}
-    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -89.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -21
-      objectReference: {fileID: 0}
-    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -123.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.2256009
-      objectReference: {fileID: 0}
-    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7882414
-      objectReference: {fileID: 0}
-    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.5697529
-      objectReference: {fileID: 0}
-    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.05622555
-      objectReference: {fileID: 0}
-    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -60.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -225.106
-      objectReference: {fileID: 0}
-    - target: {fileID: 363093555575640342, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 59.324
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b, type: 3}
 --- !u!1001 &2102543586163332065
 PrefabInstance:
   m_ObjectHideFlags: 0
