@@ -35,7 +35,7 @@ public class ArcMove : Entity
         if (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            transform.position = Bezier.QuadraticBezier(start, mid, target.position, (elapsed / duration) >= 1 ? 1 : elapsed / duration);
+            transform.position = Curve.QuadraticBezier(start, mid, target.position, (elapsed / duration) >= 1 ? 1 : elapsed / duration);
         }
     }
 }

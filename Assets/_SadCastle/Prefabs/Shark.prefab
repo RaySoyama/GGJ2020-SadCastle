@@ -142,6 +142,7 @@ MonoBehaviour:
   move: 1
   elapsed: 0
   duration: 1
+  destroyTime: 1
   height: 5
 --- !u!54 &-3377035702823559246
 Rigidbody:
