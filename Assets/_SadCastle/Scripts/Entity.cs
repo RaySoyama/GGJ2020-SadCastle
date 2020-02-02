@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+    public SpawnManager._Entity EntityType;
     public Transform target;
+    public int maxChuncks;
     public bool move;
     public float elapsed, duration;
     public float destroyTime;
@@ -43,7 +45,11 @@ public class Entity : MonoBehaviour
     {
         if (other.CompareTag("CastleChunk"))
         {
-            other.GetComponent<CastleChunk>().Destroy();
+            if (maxChuncks > 0)
+            {
+                maxChuncks--;
+                other.GetComponent<CastleChunk>().Destroy();
+            }
         }
     }
 }

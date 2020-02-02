@@ -24,7 +24,6 @@ public class SpawnManager : MonoBehaviour
     [System.Serializable]
     public class SpawnType
     {
-        public _Entity name;
         public GameObject entityPrefab;
         public Transform[] spawnPositions;
     }
@@ -34,14 +33,14 @@ public class SpawnManager : MonoBehaviour
     [Header("Spawn Types")]
     public SpawnType[] spawnTypes;
 
-    public Transform[] targets;
     [Header("Spawn Cooldown")]
     public bool autoSpawn;
     public float cooldownDuration;
     float spawnTimer;
+    [SerializeField]
     float lastHealthyChunkTimer;
 
-    public Animator lightning;
+    public Entity lightning;
 
     public static SpawnManager instance;
 
@@ -77,7 +76,7 @@ public class SpawnManager : MonoBehaviour
 
             if (lastHealthyChunkTimer > 6)
             {
-                lightning.SetTrigger("DoLightning");
+                lightning.Move();
             }
         }
         else
@@ -101,18 +100,25 @@ public class SpawnManager : MonoBehaviour
     public void SpawnEntity(_Entity entity)
     {
         SpawnType currentSpawnType = GetEntity(entity);
+
+        if (currentSpawnType == null)
+        {
+            Debug.LogError($"Entity {entity.ToString()} does not exsist ");
+            return;
+        }
+
         int randPos = Random.Range(0, currentSpawnType.spawnPositions.Length);
 
         Entity currentEntity = Instantiate(currentSpawnType.entityPrefab, currentSpawnType.spawnPositions[randPos].position,
             currentSpawnType.spawnPositions[randPos].rotation).GetComponent<Entity>();
-        currentEntity.target = targets[Random.Range(0, targets.Length)];
+        currentEntity.target = castle.GetChunk(Random.Range(0, 3), Random.Range(0, 3)).transform;
     }
 
     public SpawnType GetEntity(_Entity name)
     {
         for (int i = 0; i < spawnTypes.Length; i++)
         {
-            if (spawnTypes[i].name == name)
+            if (spawnTypes[i].entityPrefab.GetComponent<Entity>().EntityType == name)
             {
                 return spawnTypes[i];
             }

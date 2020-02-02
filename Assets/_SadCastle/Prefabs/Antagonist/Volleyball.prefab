@@ -154,12 +154,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3d58fefdd5b5649874e9ede2949f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntityType: 6
   target: {fileID: 0}
+  maxChuncks: 2
   move: 1
   elapsed: 0
   duration: 1
   destroyTime: 1
-  endDistance: 5
+  endDistance: 6
   height: 4
 --- !u!135 &3855676651006487727
 SphereCollider:

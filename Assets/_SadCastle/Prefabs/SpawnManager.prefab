@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57dccbd656a2af64ead63a0d8992f0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  castle: {fileID: 0}
   spawnTypes:
   - name: 12
     entityPrefab: {fileID: 5746678492221084828, guid: 999c19e8c5a93b14999a047a8229be8d,
@@ -62,13 +63,12 @@ MonoBehaviour:
     spawnPositions:
     - {fileID: 0}
     - {fileID: 0}
-  targets:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  autoSpawn: 1
-  spawnTimer: 0
-  cooldownDuration: 2
+  - name: 6
+    entityPrefab: {fileID: 3726066018062131050, guid: 74a54c7f99158a04abb32a0d4270d476,
+      type: 3}
+    spawnPositions:
+    - {fileID: 0}
+    - {fileID: 0}
+  autoSpawn: 0
+  cooldownDuration: 4
+  lightning: {fileID: 0}
