@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Bottle : Entity
 {
+    public float height;
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
+
+        start = transform.position;
+        mid = Vector3.Lerp(target.position, transform.position, 0.5f) + Vector3.up * height;
     }
 
-    // Update is called once per frame
-    protected override void Update()
+    public override void Move()
     {
-        
+        if (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            transform.position = Curve.QuadraticBezier(start, mid, target.position, (elapsed / duration) >= 1 ? 1 : elapsed / duration);
+        }
     }
 }

@@ -26,12 +26,6 @@ public class ArcMove : Entity
         }
     }
 
-    // Update is called once per frame
-    protected override void Update()
-    {
-        base.Update();
-    }
-
     public override void Move()
     {
         if (elapsed < duration)
