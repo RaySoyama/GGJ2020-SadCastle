@@ -177,7 +177,7 @@ MonoBehaviour:
   move: 1
   elapsed: 0
   duration: 0
-  destroyTime: 10
+  destroyTime: 7
   OnSpawn:
     m_PersistentCalls:
       m_Calls: []
@@ -194,8 +194,10 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   onSpawnAudio: []
-  onMidAudio: []
-  onEndAudio: []
+  onMidAudio:
+  - {fileID: 8300000, guid: ccf94e52ebfda4c4e84915a6cf0a0911, type: 3}
+  onEndAudio:
+  - {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!1 &363093556444403521
 GameObject:
