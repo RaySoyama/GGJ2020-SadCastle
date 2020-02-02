@@ -17,6 +17,8 @@ public class MenuController : MonoBehaviour
     public GameObject[] panels;
     public GameObject defaultActivePanel;
 
+    public bool canHide;
+
     public void SetActivePanel(GameObject newActivePanel)
     {
         foreach(var pan in panels)
@@ -82,6 +84,8 @@ public class MenuController : MonoBehaviour
     [ContextMenu("Hide Menu")]
     public void HideMenu()
     {
+        if(!canHide) { return; }
+
         OnMenuVisibilityChanged?.Invoke(false);
 
         foreach (var elem in elements)
