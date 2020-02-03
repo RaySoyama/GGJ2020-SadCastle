@@ -62,6 +62,13 @@ public class WorldMachine : MonoBehaviour
             clip.AddEvent(evt);
         }
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            SpawnFish();
+            AnimationEvent evt = new AnimationEvent() { functionName = "SpawnFish", time = Time.timeSinceLevelLoad };
+            clip.AddEvent(evt);
+        }
+
     }
 
 
@@ -100,5 +107,9 @@ public class WorldMachine : MonoBehaviour
     public void SpawnBottle()
     {
         SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Beer);
+    }
+    public void SpawnFish()
+    {
+        SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Fish);
     }
 }
