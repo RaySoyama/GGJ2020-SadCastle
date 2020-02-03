@@ -197,8 +197,9 @@ MonoBehaviour:
   onSpawnAudio:
   - {fileID: 0}
   onMidAudio:
-  - {fileID: 8300000, guid: 55fbb45dc71b07f40b135651f61d1a2d, type: 3}
-  onEndAudio: []
+  - {fileID: 8300000, guid: 47558c39acb509449bac0f68668f8b34, type: 3}
+  onEndAudio:
+  - {fileID: 8300000, guid: ef404cb2a9400b841990d65b49a80770, type: 3}
   audioSource: {fileID: 0}
   height: 8
 --- !u!95 &5599842451199022616
