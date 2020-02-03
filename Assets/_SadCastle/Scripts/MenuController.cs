@@ -130,12 +130,12 @@ public class MenuController : MonoBehaviour
         HideMenu(true);
 
         screenSpaceColorQuad.color = Color.black * new Color(0,0,0,0);
-        screenSpaceColorQuad.DOColor(Color.black, transitionToGameDuration).SetDelay(cameraZoomDelay).SetEase(Ease.InCubic);
-        menuCamera.DOFieldOfView(20, transitionToGameDuration).SetDelay(cameraZoomDelay);
+        screenSpaceColorQuad.DOColor(Color.black, transitionToGameDuration/ 2.0f).SetDelay(cameraZoomDelay).SetEase(Ease.InCubic);
+        menuCamera.DOFieldOfView(20, transitionToGameDuration/ 2.0f).SetDelay(cameraZoomDelay);
         //menuCamera.transform.DOLookAt(menuCamera.transform.position + Vector3.right * 20.968f, 0.5f);
-        menuCamera.transform.DORotate(Vector3.right * -20.968f, transitionToGameDuration);
+        menuCamera.transform.DORotate(Vector3.right * -20.968f, transitionToGameDuration/ 2.0f);
 
-        DOVirtual.DelayedCall(transitionToGameDuration + cameraZoomDelay + 1.0f, () => ActuallyExitGame());
+        DOVirtual.DelayedCall(transitionToGameDuration/2.0f + cameraZoomDelay + 1.0f, () => ActuallyExitGame());
     }
 
     private void ActuallyExitGame()

@@ -19,6 +19,7 @@ public class SpawnManager : MonoBehaviour
         Tide,
         Meteor,
         Shark,
+        Fish
     };
 
     [System.Serializable]
@@ -99,7 +100,7 @@ public class SpawnManager : MonoBehaviour
 
         Entity currentEntity = Instantiate(spawnTypes[randInd].entityPrefab, spawnTypes[randInd].spawnPositions[randPos].position, 
             spawnTypes[randInd].spawnPositions[randPos].rotation).GetComponent<Entity>();
-        currentEntity.target = castle.GetChunk(Random.Range(0, 3), Random.Range(0, 3)).transform;
+        currentEntity.target = castle.GetChunk(Random.Range(0, 4), Random.Range(0, 4)).transform;
     }
 
     public void SpawnEntity(_Entity entity)
@@ -116,7 +117,7 @@ public class SpawnManager : MonoBehaviour
 
         Entity currentEntity = Instantiate(currentSpawnType.entityPrefab, currentSpawnType.spawnPositions[randPos].position,
             currentSpawnType.spawnPositions[randPos].rotation).GetComponent<Entity>();
-        currentEntity.target = castle.GetChunk(Random.Range(0, 3), Random.Range(0, 3)).transform;
+        currentEntity.target = castle.GetChunk(Random.Range(0, 4), Random.Range(0, 4)).transform;
     }
 
     public SpawnType GetEntity(_Entity name)

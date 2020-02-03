@@ -46,6 +46,28 @@ public class WorldMachine : MonoBehaviour
             AnimationEvent evt = new AnimationEvent() { functionName = "SpawnCoconut", time = Time.timeSinceLevelLoad };
             clip.AddEvent(evt);
         }
+        
+        if(Input.GetKeyDown(KeyCode.S))
+        {
+            SpawnBottle();
+            AnimationEvent evt = new AnimationEvent() { functionName = "SpawnBottle", time = Time.timeSinceLevelLoad };
+            clip.AddEvent(evt);
+        }
+
+
+        if(Input.GetKeyDown(KeyCode.D))
+        {
+            SpawnMeteor();
+            AnimationEvent evt = new AnimationEvent() { functionName = "SpawnMeteor", time = Time.timeSinceLevelLoad };
+            clip.AddEvent(evt);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            SpawnFish();
+            AnimationEvent evt = new AnimationEvent() { functionName = "SpawnFish", time = Time.timeSinceLevelLoad };
+            clip.AddEvent(evt);
+        }
 
     }
 
@@ -76,5 +98,18 @@ public class WorldMachine : MonoBehaviour
     public void SpawnCoconut()
     {
         SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Coconut);
+    }
+
+    public void SpawnMeteor()
+    {
+        SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Meteor);
+    }
+    public void SpawnBottle()
+    {
+        SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Beer);
+    }
+    public void SpawnFish()
+    {
+        SpawnManager.instance.SpawnEntity(SpawnManager._Entity.Fish);
     }
 }

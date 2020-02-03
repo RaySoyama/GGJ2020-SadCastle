@@ -74,7 +74,17 @@ MonoBehaviour:
     spawnPositions:
     - {fileID: 0}
     - {fileID: 0}
+  - entityPrefab: {fileID: 5746678492221084828, guid: 5b2e2475931b41e46adba70e5f95f949,
+      type: 3}
+    spawnPositions:
+    - {fileID: 0}
+    - {fileID: 0}
+  - entityPrefab: {fileID: 363093555575640343, guid: 8c0006a7c2fc6c343809dc7f2cee2b6b,
+      type: 3}
+    spawnPositions:
+    - {fileID: 0}
   autoSpawn: 0
   cooldownDuration: 4
   lastHealthyChunkTimer: 0
-  lightning: {fileID: 0}
+  lightning: {fileID: 3462554725821657113, guid: 063ffbc6ba67e6a42b78263c0d983f30,
+    type: 3}
