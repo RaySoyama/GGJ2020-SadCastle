@@ -7250,7 +7250,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "<size=50>Programmers</size>\nShanen Cross\r\nMarcel Dao\r\nTerry Nguyen
     \r\nRay Soyama \r\n\r\n<size=50>Artists</size>\nCorwin Waldron\r\nAlicia Bozzuto\r\n\r\n<size=50>Audio</size>\r\nBen
-    Gorges"
+    Georges"
 --- !u!222 &1412441766
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8385,7 +8385,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 636662153}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.49560875
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
