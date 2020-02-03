@@ -1,0 +1,94 @@
+class CastleChunk {
+
+    adjacentChunk1
+    adjacentChunk2
+
+    bool isDestroyed;
+
+    bool CanRepair {
+        get { return isDestroyed; }
+    }
+
+    bool destroyedMeshIsSet = false;
+
+    builtMesh
+    destroyedMesh
+    destroyedWithAdjacent1IntactMesh
+    destroyedWithAdjacent2IntactMesh
+    destroyedWithAdjacentsIntactMesh
+
+    Destroy() {
+        
+        UpdateMeshAfterDestruction();
+
+        // other destruction stuff
+    }
+
+    UpdateMeshAfterDestruction {
+        // should always have 0 adjacents or 2 adjacents
+        if (adjacentChunk1 && adjacentChunk2) {
+            if (adjacentChunk1.CanRepair && adjacentChunk2.CanRepair) {
+                mesh = destroyedMesh;
+            }
+            else if (adjacentChunk1.CanRepair && !adjacentChunk2.CanRepair) {
+                mesh = destroyedMeshWithAdjacent2Intact;
+            }
+            else if (!adjacentChunk1.CanRepair && !adjacentChunk2.CanRepair) {
+                mesh = destroyedMeshWithAdjacent1Intact;
+            }
+            else if (!adjacentChunk1.CanRepair && !adjacentChunk2.CanRepair) {
+                mesh = destroyedWithAdjacentsIntactMesh;
+            }
+
+            if (adjacentChunk1.CanRepair && !destroyedMeshIsSet) {
+                adjacentChunk1.UpdateMeshAfterDestruction();
+            }
+            if (adjacentChunk2.CanRepair && !destroyedMeshIsSet) {
+                adjacentChunk2.UpdateMeshAfterDestruction();
+            }
+
+            destroyedMeshIsSet = true;
+        }
+    }
+}
+
+
+
+
+
+
+
+//////////////////////
+
+class Castle {
+    UpdateAllMeshes() {
+        foreach (row in rows) {
+            for each (chunk in column) {
+                
+                if (!CanRepair) {
+                    mesh = builtMesh;
+                }
+
+                else {
+
+                    if (!adjacentChunk1 || !adjacentChunk2) {
+                        mesh = destroyedMesh;
+                    }
+
+                    if (adjacentChunk1.CanRepair && adjacentChunk2.CanRepair) {
+                        mesh = destroyedMesh;
+                    }
+                    else if (adjacentChunk1.CanRepair && !adjacentChunk2.CanRepair) {
+                        mesh = destroyedMeshWithAdjacent2Intact;
+                    }
+                    else if (!adjacentChunk1.CanRepair && adjacentChunk2.CanRepair) {
+                        mesh = destroyedMeshWithAdjacent1Intact;
+                    }
+                    else if (!adjacentChunk1.CanRepair && !adjacentChunk2.CanRepair) {
+                        mesh = destroyedWithAdjacentsIntactMesh;
+                    }
+                }
+            }
+        }
+    }
+}

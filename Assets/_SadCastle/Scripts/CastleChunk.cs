@@ -13,6 +13,11 @@ public class CastleChunk : MonoBehaviour
 
     [SerializeField] Mesh builtMesh;
     [SerializeField] Mesh destroyedMesh;
+    [SerializeField] Mesh destroyedWithAdjacent1IntactMesh;
+    [SerializeField] Mesh destroyedWithAdjacent2IntactMesh;
+    [SerializeField] Mesh destroyedWithAdjacentsIntactMesh;
+    [SerializeField] CastleChunk adjacentChunk1;
+    [SerializeField] CastleChunk adjacentChunk2;
 
     MeshRenderer meshRenderer;
     MeshFilter meshFilter;
@@ -75,7 +80,8 @@ public class CastleChunk : MonoBehaviour
     {
         isDestroyed = true;
         // meshRenderer.enabled = false;
-        meshFilter.mesh = destroyedMesh;
+        // meshFilter.mesh = destroyedMesh;
+        castle.UpdateMeshes();
 
         lastDestroySound = GRCETOUOO(destroySounds, lastDestroySound);
         audioSource.PlayOneShot(lastDestroySound);
@@ -86,7 +92,8 @@ public class CastleChunk : MonoBehaviour
         if (!isDestroyed) { return; }
 
         isDestroyed = false;
-        meshFilter.mesh = builtMesh;
+        // meshFilter.mesh = builtMesh;
+        castle.UpdateMeshes();
         // meshRenderer.enabled = true;
 
         lastRepairSound = GRCETOUOO(repairSounds, lastRepairSound);
@@ -101,5 +108,27 @@ public class CastleChunk : MonoBehaviour
     void Reset()
     {
         audioSource = GetComponent<AudioSource>();
+    }
+
+    public void UpdateMesh()
+    {
+        if (!CanRepair()) {
+            meshFilter.mesh = builtMesh;
+        }
+        else if (!adjacentChunk1 || !adjacentChunk2) {
+            meshFilter.mesh = destroyedMesh;
+        }
+         else if (adjacentChunk1.CanRepair() && adjacentChunk2.CanRepair()) {
+            meshFilter.mesh = destroyedMesh;
+        }
+        else if (adjacentChunk1.CanRepair() && !adjacentChunk2.CanRepair()) {
+            meshFilter.mesh = destroyedWithAdjacent2IntactMesh;
+        }
+        else if (!adjacentChunk1.CanRepair() && adjacentChunk2.CanRepair()) {
+            meshFilter.mesh = destroyedWithAdjacent1IntactMesh;
+        }
+        else if (!adjacentChunk1.CanRepair() && !adjacentChunk2.CanRepair()) {
+            meshFilter.mesh = destroyedWithAdjacentsIntactMesh;
+        }
     }
 }
