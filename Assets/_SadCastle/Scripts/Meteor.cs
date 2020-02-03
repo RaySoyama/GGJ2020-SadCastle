@@ -39,5 +39,10 @@ public class Meteor : Entity
     {
         Kernel.instance.EndGame();
     }
+
+    private void OnMouseDown()
+    {
+        Destroy(gameObject);
+    }
 }
  

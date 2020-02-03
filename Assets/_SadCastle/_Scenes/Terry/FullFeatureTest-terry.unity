@@ -4749,6 +4749,11 @@ PrefabInstance:
       propertyPath: spawnTypes.Array.data[7].spawnPositions.Array.data[0]
       value: 
       objectReference: {fileID: 206153189}
+    - target: {fileID: 3445514945978328017, guid: 0af55676cb208404dbabfee7db54c18c,
+        type: 3}
+      propertyPath: autoSpawn
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af55676cb208404dbabfee7db54c18c, type: 3}
 --- !u!1 &1237837063 stripped
