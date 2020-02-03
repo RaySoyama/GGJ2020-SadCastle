@@ -65,4 +65,14 @@ public class Castle : MonoBehaviour
         CastleChunk chunk = GetChunk(row, column);
         chunk.Destroy();
     }
+
+    public void UpdateMeshes()
+    {
+        foreach (CastleChunkRow row in castleChunkRows)
+        {
+            foreach (CastleChunk chunk in row.CastleChunks) {
+                chunk.UpdateMesh();
+            }
+        }
+    }
 }
