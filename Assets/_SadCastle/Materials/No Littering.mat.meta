@@ -1,18 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/_SadCastle/Cursors.meta
-guid: 22a180a787105f14b92e72a513185236
-folderAsset: yes
-DefaultImporter:
-||||||| constructed merge base:Assets/Cursors.meta
-guid: a9661c33ce5eb9646b70906551c515b7
-folderAsset: yes
-DefaultImporter:
-=======
-guid: e99b16f6827e48246bcb7ffe9484281c
+guid: cc40abaccead71047bdc8edb6e52dddd
 NativeFormatImporter:
->>>>>>> Thanks Ray:Assets/_SadCastle/Materials/No Littering.mat.meta
   externalObjects: {}
-  mainObjectFileID: 2100000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
