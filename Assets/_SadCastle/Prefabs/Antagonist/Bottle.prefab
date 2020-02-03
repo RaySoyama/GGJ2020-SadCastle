@@ -178,7 +178,7 @@ MonoBehaviour:
   move: 1
   elapsed: 0
   duration: 3
-  destroyTime: 4
+  destroyTime: 3
   OnSpawn:
     m_PersistentCalls:
       m_Calls: []

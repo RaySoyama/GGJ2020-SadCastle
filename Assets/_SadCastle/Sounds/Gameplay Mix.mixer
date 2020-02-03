@@ -20,6 +20,39 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &-4686768546860320583
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 2828ca763e63d174a980090e8d6a0e69
+  m_EffectName: Attenuation
+  m_MixLevel: a889fd85b15f5da4cba5a0f3db0b74af
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!243 &-3862422678549666733
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Soundscape
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 98fed3eacd8d21a48970b42a58774bb2
+  m_Children: []
+  m_Volume: e418768df1b35e4458959c6181946109
+  m_Pitch: 38213fbdcb26a2a458682db709c11591
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -4686768546860320583}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &-3293475171616199230
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -89,6 +122,7 @@ AudioMixerController:
     - 0c13ebe85972e6b4b96822aeb6ab25d6
     - 99c0ea585830be64c82786dd0b98de16
     - a2d4b64dca523704cbe37167adefd107
+    - 98fed3eacd8d21a48970b42a58774bb2
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -104,6 +138,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: -3293475171616199230}
   - {fileID: -4804280584664040409}
+  - {fileID: -3862422678549666733}
   m_Volume: 70d7f1a81456d4a43837ff25698d6af8
   m_Pitch: dc5c8681b65a154409870aa48e869392
   m_Send: 00000000000000000000000000000000

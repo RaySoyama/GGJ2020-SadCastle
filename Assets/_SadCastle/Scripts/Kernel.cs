@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DG.Tweening;
 
 public class Kernel : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class Kernel : MonoBehaviour
     public AudioClip gameOverAudio;
     public AudioSource audioSource;
 
+    public float gameOverMusicDelay = 0.5f;
+
     void Start()
     {
         if (instance != null) { Destroy(this); Debug.LogWarning("Duplicate kernal detected. Destroying...", gameObject); return; }
@@ -38,7 +41,7 @@ public class Kernel : MonoBehaviour
             }
         }
 
-        OnGameOver?.AddListener(() => audioSource.PlayOneShot(gameOverAudio));
+        OnGameOver?.AddListener(() => DOVirtual.DelayedCall(gameOverMusicDelay, ()=>audioSource.PlayOneShot(gameOverAudio)));
     }
 
     void Update()
